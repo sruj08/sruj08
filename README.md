@@ -1,5 +1,13 @@
 <div align="center">
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="dark_mode.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="light_mode.svg" />
+  <img alt="sruj08's GitHub profile" src="dark_mode.svg" width="100%" />
+</picture>
+
+<br><br>
+
 <img src="https://raw.githubusercontent.com/sruj08/sruj08/main/apple-banner-header.svg" width="100%" alt="Srujan Satav Header Banner" />
 
 <br><br>
