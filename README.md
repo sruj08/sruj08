@@ -39,7 +39,7 @@
 ### HACKATHON VICTORIES (PROOF OF VELOCITY)
 
 <p align="center">
-  <img src="victories-grid.svg" width="100%" alt="sruj08 Hackathon Victories" />
+  <img src="victories-grid.svg?v=3" width="100%" alt="sruj08 Hackathon Victories" />
 </p>
 
 <p align="center">
@@ -80,7 +80,7 @@
 ### TECH STACK (TERMINAL METADATA)
 
 <p align="center">
-  <img src="tech-stack.svg" width="100%" alt="sruj08 Technical Stack" />
+  <img src="tech-stack.svg?v=3" width="100%" alt="sruj08 Technical Stack" />
 </p>
 
 ---
@@ -88,7 +88,7 @@
 ### ACTIVE EXECUTION (CONTRIBUTION CALENDAR)
 
 <p align="center">
-  <img src="contrib-heatmap.svg" width="100%" alt="Srujan's GitHub Contributions Chart" />
+  <img src="contrib-heatmap.svg?v=3" width="100%" alt="Srujan's GitHub Contributions Chart" />
 </p>
 
 <p align="center">
