@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="110" height="20" viewBox="0 0 110 20">
   <style>
     .social-text { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 12px; font-weight: bold; fill: #666666; transition: fill 0.2s; }
-    .social-icon { fill: #666666; transition: fill 0.2s; }
+    .social-icon { fill: #0A66C2; transition: fill 0.2s; }
     svg:hover .social-text { fill: #FFB000; }
     svg:hover .social-icon { fill: #FFB000; }
   </style>

@@ -2,10 +2,10 @@ import os
 import xml.etree.ElementTree as ET
 
 SOCIALS = [
-    {"id": "linkedin", "label": "LINKEDIN", "icon": "icons/linkedin.svg"},
-    {"id": "email", "label": "EMAIL", "icon": "icons/gmail.svg"},
-    {"id": "leetcode", "label": "LEETCODE", "icon": "icons/leetcode.svg"},
-    {"id": "github", "label": "GITHUB", "icon": "icons/github.svg"}
+    {"id": "linkedin", "label": "LINKEDIN", "icon": "icons/linkedin.svg", "color": "#0A66C2"},
+    {"id": "email", "label": "EMAIL", "icon": "icons/gmail.svg", "color": "#EA4335"},
+    {"id": "leetcode", "label": "LEETCODE", "icon": "icons/leetcode.svg", "color": "#FFA116"},
+    {"id": "github", "label": "GITHUB", "icon": "icons/github.svg", "color": "#FFFFFF"}
 ]
 
 def extract_paths(filepath):
@@ -51,7 +51,7 @@ def create_badge():
         svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" width="{total_width}" height="{height}" viewBox="0 0 {total_width} {height}">')
         svg.append('  <style>')
         svg.append('    .social-text { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 12px; font-weight: bold; fill: #666666; transition: fill 0.2s; }')
-        svg.append('    .social-icon { fill: #666666; transition: fill 0.2s; }')
+        svg.append(f'    .social-icon {{ fill: {item.get("color", "#666666")}; transition: fill 0.2s; }}')
         svg.append('    svg:hover .social-text { fill: #FFB000; }')
         svg.append('    svg:hover .social-icon { fill: #FFB000; }')
         svg.append('  </style>')
