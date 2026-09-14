@@ -7,10 +7,10 @@
   </picture>
 </p>
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=3000&pause=1000&color=FF6B00&width=450&height=50&lines=FORWARD+DEPLOYED+ENGINEER;BUILDING+ZERO-TO-ONE;SCALING+CRITICAL+INFRA" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=3000&pause=1000&color=FF6B00&center=true&vCenter=true&width=600&height=50&lines=FORWARD+DEPLOYED+ENGINEER;BUILDING+ZERO-TO-ONE;SCALING+CRITICAL+INFRA" alt="Typing SVG" />
 </p>
 
-<h1 align="center">Srujan S. ("sruj08")</h1>
+<h1 align="center">Srujan Satav</h1>
 <p align="center">
   <strong>Forward Deployed Systems Builder & AI Engineer</strong><br>
   <em>Deploying resilient systems, sovereign intelligence engines, and autonomous agents to solve real-world crises.</em>
@@ -18,15 +18,10 @@
 
 <!-- SOCIAL LINKS (FRICTIONLESS CONTACT) -->
 <p align="center">
-  <a href="https://linkedin.com/in/satavsrujan"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="mailto:satavsrujan@gmail.com"><img src="https://img.shields.io/badge/Email-FF6B00?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-  <a href="https://leetcode.com/sruj08"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode" /></a>
-  <a href="https://github.com/sruj08"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/github/stars/sruj08?color=00C853&style=flat-square" alt="Stars" />
-  <img src="https://img.shields.io/github/followers/sruj08?color=FF6B00&style=flat-square" alt="Followers" />
+  <a href="https://linkedin.com/in/satavsrujan"><code>[ LINKEDIN ]</code></a> &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="mailto:satavsrujan@gmail.com"><code>[ EMAIL ]</code></a> &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://leetcode.com/sruj08"><code>[ LEETCODE ]</code></a> &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://github.com/sruj08"><code>[ GITHUB ]</code></a>
 </p>
 
 ---
