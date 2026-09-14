@@ -2,7 +2,7 @@ import os
 import json
 from datetime import datetime
 
-PALETTE = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353", "#69f0a0"]
+PALETTE = ["#050505", "#003b14", "#006d25", "#00a238", "#00c853", "#39ff84"]
 
 def render_heatmap_svg(data_path="data/contributions.json", output_svg="contrib-heatmap.svg"):
     if not os.path.exists(data_path):
@@ -30,24 +30,27 @@ def render_heatmap_svg(data_path="data/contributions.json", output_svg="contrib-
     svg = []
     svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {svg_width} {svg_height}" width="{svg_width}" height="{svg_height}">')
     svg.append('<style>')
-    svg.append('  .bg { fill: #0d1117; rx: 8px; ry: 8px; stroke: #30363d; stroke-width: 1px; }')
-    svg.append('  .title-bar { fill: #161b22; rx: 8px; ry: 8px; }')
-    svg.append('  .title { font-family: monospace, Courier; font-size: 11px; font-weight: bold; fill: #8b949e; }')
-    svg.append('  .day-rect { rx: 2px; ry: 2px; opacity: 1; }')
-    svg.append('  .label { font-family: monospace, Courier; font-size: 10px; fill: #7d8590; }')
-    svg.append('  .stats { font-family: monospace, Courier; font-size: 11px; font-weight: bold; fill: #39d353; }')
-    svg.append('  .legend-text { font-family: monospace, Courier; font-size: 10px; fill: #7d8590; }')
+    svg.append('  .bg { fill: #050505; rx: 8px; ry: 8px; stroke: #1f1f1f; stroke-width: 1px; }')
+    svg.append('  .title { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 14px; font-weight: bold; fill: #FF6B00; }')
+    svg.append('  .day-rect { rx: 0px; ry: 0px; opacity: 1; }')
+    svg.append('  .label { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 10px; fill: #7d8590; }')
+    svg.append('  .stats { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 11px; font-weight: bold; fill: #00c853; }')
+    svg.append('  .legend-text { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 10px; fill: #7d8590; }')
     svg.append('</style>')
     
-    # Outer terminal box
-    svg.append(f'<rect width="{svg_width}" height="{svg_height}" class="bg" />')
+    svg.append('  <defs>')
+    svg.append('    <filter id="noise" x="0" y="0" width="100%" height="100%">')
+    svg.append('      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/>')
+    svg.append('      <feColorMatrix type="matrix" values="1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 0.05 0" />')
+    svg.append('    </filter>')
+    svg.append('  </defs>')
     
-    # Header bar
-    svg.append(f'<path d="M 0 8 A 8 8 0 0 1 8 0 L {svg_width - 8} 0 A 8 8 0 0 1 {svg_width} 8 L {svg_width} 28 L 0 28 Z" fill="#161b22" stroke="#30363d" stroke-width="1" />')
-    svg.append('<circle cx="15" cy="14" r="4" fill="#ff5f56" />')
-    svg.append('<circle cx="27" cy="14" r="4" fill="#ffbd2e" />')
-    svg.append('<circle cx="39" cy="14" r="4" fill="#27c93f" />')
-    svg.append(f'<text x="{svg_width/2}" y="18" text-anchor="middle" class="title">sruj08@github ~ $ ./contributions.sh</text>')
+    # Outer terminal box & Noise Texture
+    svg.append(f'<rect width="{svg_width}" height="{svg_height}" class="bg" />')
+    svg.append(f'<rect width="{svg_width}" height="{svg_height}" fill="transparent" filter="url(#noise)" style="pointer-events: none;" rx="8" ry="8" />')
+    
+    # Header Line
+    svg.append(f'<text x="28" y="38" class="title">--- sruj08@contributions -----------------------------------------------------------───────────</text>')
     
     weeks = [[] for _ in range(53)]
     for idx, d in enumerate(days):

@@ -1,13 +1,13 @@
 import os
 import xml.etree.ElementTree as ET
 
-BG_COLOR = "#0a0b0d" # Deep Slate Charcoal
-BORDER_COLOR = "#21252e" # Hairline Divider
-CARD_BG = "#111317" # Elevated Surface
+BG_COLOR = "#050505" # Tactical Obsidian
+BORDER_COLOR = "#1f1f1f" # Hairline Divider
+CARD_BG = "transparent" # No bulky cards
 HEADER_COLOR = "#FF6B00" # Tactical Orange
 TEXT_COLOR = "#f4f5f7" # Signature Off-White
 MUTED_TEXT = "#7d8a9e" # Muted Slate-Gray
-ICON_BG = "#171a21" # High Contrast Slate
+ICON_BG = "transparent" # No bubbly icons
 
 BRAND_COLORS = {
     "python": "#3776AB",
@@ -48,13 +48,21 @@ def generate_apple_hig_tech_card(output_path="tech-stack.svg"):
     svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-label="Official Tech Stack">')
     
     svg.append('  <style>')
-    svg.append('    .header-title { font-family: "SF Mono", "Consolas", "Menlo", monospace; font-size: 14px; font-weight: bold; fill: #FF6B00; }')
-    svg.append('    .tech-title { font-family: "SF Pro Display", "Inter", sans-serif; font-size: 13px; font-weight: 800; fill: #f4f5f7; }')
-    svg.append('    .tech-subtitle { font-family: "SF Mono", "Consolas", "Menlo", monospace; font-size: 11px; fill: #7d8a9e; }')
+    svg.append('    .header-title { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 14px; font-weight: bold; fill: #FF6B00; }')
+    svg.append('    .tech-title { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 13px; font-weight: bold; fill: #f4f5f7; }')
+    svg.append('    .tech-subtitle { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 11px; fill: #7d8a9e; }')
     svg.append('  </style>')
     
-    # Outer Background Box
-    svg.append(f'  <rect x="0.5" y="0.5" width="{width - 1}" height="{height - 1}" rx="12" fill="{BG_COLOR}" stroke="{BORDER_COLOR}"/>')
+    svg.append('  <defs>')
+    svg.append('    <filter id="noise" x="0" y="0" width="100%" height="100%">')
+    svg.append('      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/>')
+    svg.append('      <feColorMatrix type="matrix" values="1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 0.05 0" />')
+    svg.append('    </filter>')
+    svg.append('  </defs>')
+    
+    # Outer Background Box & Noise Texture
+    svg.append(f'  <rect x="0.5" y="0.5" width="{width - 1}" height="{height - 1}" rx="8" fill="{BG_COLOR}" stroke="{BORDER_COLOR}"/>')
+    svg.append(f'  <rect x="0.5" y="0.5" width="{width - 1}" height="{height - 1}" rx="8" fill="transparent" filter="url(#noise)" style="pointer-events: none;" />')
     
     # Header Line
     svg.append(f'  <text x="28" y="38" class="header-title">--- sruj08@core-skills ----------------------------------------------------------------───────────</text>')
@@ -89,11 +97,10 @@ def generate_apple_hig_tech_card(output_path="tech-stack.svg"):
         brand_color = BRAND_COLORS.get(key, "#00C853")
         
         svg.append(f'  <g>')
-        # Glassmorphic Inner Tile
-        svg.append(f'    <rect x="{x}" y="{y}" width="332" height="58" rx="8" fill="{CARD_BG}" stroke="{BORDER_COLOR}" stroke-width="1"/>')
         
-        # Icon Background Tile
-        svg.append(f'    <rect x="{x + 10}" y="{y + 9}" width="40" height="40" rx="6" fill="{ICON_BG}" stroke="{BORDER_COLOR}" stroke-width="0.75"/>')
+        # Subtle framing instead of glassmorphism
+        svg.append(f'    <rect x="{x}" y="{y}" width="332" height="58" fill="none" stroke="{BORDER_COLOR}" stroke-width="1"/>')
+        svg.append(f'    <rect x="{x}" y="{y}" width="3" height="58" fill="{brand_color}" />')
         
         # Embedded Downloaded Official SimpleIcons SVG
         svg.append(f'    <g transform="translate({x + 18}, {y + 17})" fill="{brand_color}">')
