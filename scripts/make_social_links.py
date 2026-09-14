@@ -45,24 +45,20 @@ def create_badge():
         
         path_data = extract_paths(item["icon"])
         
-        # We assume the original icon viewBox is 0 0 24 24 for simpleicons
+        color = item.get("color", "#666666")
         
         svg = []
         svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" width="{total_width}" height="{height}" viewBox="0 0 {total_width} {height}">')
-        svg.append('  <style>')
-        svg.append('    .social-text { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 12px; font-weight: bold; fill: #666666; transition: fill 0.2s; }')
-        svg.append(f'    .social-icon {{ fill: {item.get("color", "#666666")}; transition: fill 0.2s; }}')
-        svg.append('    svg:hover .social-text { fill: #FFB000; }')
-        svg.append('    svg:hover .social-icon { fill: #FFB000; }')
-        svg.append('  </style>')
         
+        # Icon
         svg.append(f'  <g transform="translate(0, 2)">')
-        svg.append(f'    <svg width="{icon_w}" height="{icon_h}" viewBox="0 0 24 24" class="social-icon">')
+        svg.append(f'    <svg width="{icon_w}" height="{icon_h}" viewBox="0 0 24 24" fill="{color}">')
         svg.append(f'      {path_data}')
         svg.append(f'    </svg>')
         svg.append(f'  </g>')
         
-        svg.append(f'  <text x="{icon_w + gap}" y="14" class="social-text">{label}</text>')
+        # Text
+        svg.append(f'  <text x="{icon_w + gap}" y="14" font-family="SF Mono, Consolas, Courier New, monospace" font-size="12px" font-weight="bold" fill="{color}">{label}</text>')
         
         svg.append('</svg>')
         

@@ -18,10 +18,10 @@
 
 <!-- SOCIAL LINKS (FRICTIONLESS CONTACT) -->
 <p align="center">
-  <a href="https://linkedin.com/in/satavsrujan"><img src="assets/socials/linkedin.svg?v=2" alt="LinkedIn" /></a> &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="mailto:satavsrujan@gmail.com"><img src="assets/socials/email.svg?v=2" alt="Email" /></a> &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="https://leetcode.com/sruj08"><img src="assets/socials/leetcode.svg?v=2" alt="LeetCode" /></a> &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="https://github.com/sruj08"><img src="assets/socials/github.svg?v=2" alt="GitHub" /></a>
+  <a href="https://linkedin.com/in/satavsrujan"><img src="assets/socials/linkedin.svg?v=3" alt="LinkedIn" /></a> &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="mailto:satavsrujan@gmail.com"><img src="assets/socials/email.svg?v=3" alt="Email" /></a> &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://leetcode.com/sruj08"><img src="assets/socials/leetcode.svg?v=3" alt="LeetCode" /></a> &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://github.com/sruj08"><img src="assets/socials/github.svg?v=3" alt="GitHub" /></a>
 </p>
 
 ---
