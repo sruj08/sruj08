@@ -58,7 +58,7 @@ def image_to_base64(filepath, target_size=(320, 230)):
 
 def generate_victories_svg(output_path="victories-grid.svg"):
     width = 1125
-    height = 320
+    height = 430
     
     # We want 4 columns.
     # Margins: 34 left, 34 right
@@ -87,11 +87,18 @@ def generate_victories_svg(output_path="victories-grid.svg"):
     svg.append('  <defs>')
     for i in range(4):
         x = start_x + i * (img_w + gap)
-        svg.append(f'    <clipPath id="clip-{i}"><rect x="{x}" y="30" width="{img_w}" height="{img_h}" rx="8" ry="8" /></clipPath>')
+        svg.append(f'    <clipPath id="clip-{i}"><rect x="{x}" y="140" width="{img_w}" height="{img_h}" rx="8" ry="8" /></clipPath>')
     svg.append('  </defs>')
     
     # Outer Background Box
     svg.append(f'  <rect x="0.5" y="0.5" width="{width - 1}" height="{height - 1}" rx="12" fill="{BG_COLOR}" stroke="{BORDER_COLOR}"/>')
+    
+    # Header Line (matching ASCII aesthetic)
+    svg.append(f'  <text x="28" y="38" class="header-text">--- sruj08@victories ----------------------------------------------------------------───────────</text>')
+    
+    # Hero Headline
+    svg.append(f'  <text x="34" y="75" font-size="28" font-family="-apple-system, BlinkMacSystemFont, \'Inter\', sans-serif" font-weight="800" fill="#ffffff" letter-spacing="-0.5">BUILT UNDER PRESSURE. PROVEN IN PUBLIC.</text>')
+    svg.append(f'  <text x="34" y="98" class="meta-text" fill="{MUTED_TEXT}">GOVT. OF MAHARASHTRA · GLOBAL / NATIONAL SCALE · 6,500+ REGISTRATIONS</text>')
     
     # Architectural Grid System & Crosshairs
     svg.append(f'  <g stroke="{BORDER_COLOR}" stroke-width="1">')
@@ -107,7 +114,7 @@ def generate_victories_svg(output_path="victories-grid.svg"):
     
     for i in range(4):
         x = start_x + i * (img_w + gap)
-        y = 30
+        y = 140
         
         # Meta Tag
         svg.append(f'  <text x="{x}" y="{y - 8}" class="meta-text">{meta_tags[i]}</text>')

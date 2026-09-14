@@ -62,7 +62,7 @@
 
 *   **Engineering Feat**: Designed an offline-first vector cache and speech-to-speech compression loop that reduces payload sizes by 78%, allowing farmers with 2G connections to receive localized agronomic advice.
 *   **Stack**: `FastAPI` · `PyTorch` · `LangChain` · `Whisper-API` · `PostgreSQL`
-*   [Live Demo](https://github.com/sruj08) | [Codebase](https://github.com/sruj08)
+*   [Live Demo](https://github.com/sruj08/KrishiSahAI) | [Codebase](https://github.com/sruj08/KrishiSahAI)
 <br>
 
 #### **02. Chanakya (चाणक्य)** | *Sovereign Geopolitical & Macro Engine*
@@ -70,7 +70,7 @@
 
 *   **Engineering Feat**: Built a custom streaming gRPC ingest pipeline processing 10k+ international policy pages per second with real-time vector embeddings and semantic graph node updates.
 *   **Stack**: `Go` · `gRPC` · `Claude-3.5-Sonnet` · `Qdrant` · `TimescaleDB`
-*   [Interactive UI](https://github.com/sruj08) | [Architecture Paper](https://github.com/sruj08)
+*   [Interactive UI](https://github.com/sruj08/Aegis) | [Architecture Paper](https://github.com/sruj08/Aegis)
 <br>
 
 #### **03. Amrit (अमृत)** | *Decentralized Resource Ledger*
@@ -78,7 +78,7 @@
 
 *   **Engineering Feat**: Wrote zero-gas-fee consensus smart contracts running on localized nodes, enabling local councils to track and verify physical resource drops with zero double-allocation.
 *   **Stack**: `Solidity` · `Rust` · `React` · `Ethers.js` · `IPFS`
-*   [Contract Audit](https://github.com/sruj08) | [Codebase](https://github.com/sruj08)
+*   [Contract Audit](https://github.com/sruj08/amrit) | [Codebase](https://github.com/sruj08/amrit)
 
 ---
 
