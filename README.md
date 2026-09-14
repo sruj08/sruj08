@@ -52,27 +52,27 @@
 
 ### FEATURED PROJECTS (EVIDENCE OF EXECUTION)
 
-#### **01. Krishi SahAI (कृषि सहाय)** | *GenAI · YOLOv8 · LangChain · Flask · React*
-> Full-stack intelligence platform combining a 38-class crop-disease classifier, YOLOv8 pest detection, and real-time advisory generation.
+#### **01. KRISHI SAHAI** | *Predictive Agricultural Intelligence Platform*
+> End-to-end intelligence engine combining multi-factor outbreak forecasting, edge-cached voice interaction, and biochemical waste-to-value routing.
 
-*   **Architecture**: Built an LLM-orchestrated recommendation engine and a modular Flask backend with Firebase authentication.
-*   **Target**: The definitive AI platform for Indian farmers, scaling from smallholders to progressive agripreneurs.
+*   **Engineering Feat**: Designed an offline-first speech compression loop reducing payload sizes by 78% for 2G networks, alongside a deterministic risk engine for 3-5 day disease forecasting.
+*   **Stack**: `PyTorch` · `YOLOv8` · `LangChain` · `Flask` · `React`
 *   <img src="https://cdn.simpleicons.org/github/00C853" width="14" alt="GitHub" /> [sruj08/KrishiSahAI](https://github.com/sruj08/KrishiSahAI)
 <br>
 
-#### **02. CHANAKYA (चाणक्य)** | *AI-Powered Regulatory Intelligence Platform*
-> Architected full-stack platform with modular backend APIs and investigator dashboards for the SEBI Hackathon.
+#### **02. AEGIS (CHANAKYA)** | *Sovereign Regulatory Operating System (RegOS)*
+> Cryptographically-secured invariant core built for SEBI to decompose macroeconomic policies, map semantic blast radii, and execute compliance via Open Policy Agent.
 
-*   **Architecture**: Enables regulators to analyze market activity via AI-assisted, auditable workflows.
-*   **Target**: Built for scalable case-loads and complex regulatory oversight.
-*   *(Internal/Private Codebase)*
+*   **Engineering Feat**: Engineered a bi-temporal SQLite engine with Ed25519 signed obligations and recursive graph queries to ensure tamper-proof, "as-of" regulatory auditing.
+*   **Stack**: `Go` · `SQLite` · `OPA/Rego` · `Claude-3.5-Sonnet` · `Next.js 16`
+*   <img src="https://cdn.simpleicons.org/github/00C853" width="14" alt="GitHub" /> [sruj08/Aegis](https://github.com/sruj08/Aegis)
 <br>
 
-#### **03. AMRIT (अमृत)** | *Advanced Mission Resource Intelligence Tool*
-> A mission-intelligence platform that turns Chandrayaan-2 DFSAR radar into actionable landing recommendations (ISRO Bharatiya Antariksh 2026).
+#### **03. AMRIT** | *Advanced Mission Resource Intelligence Tool (ISRO)*
+> Lunar mission-intelligence platform converting raw Chandrayaan-2 DFSAR polarimetry into actionable water-ice probability maps and power-aware rover traverses.
 
-*   **Architecture**: Calibrated ice-likelihood, propagated uncertainty, power-aware rover traverses, and Monte-Carlo resource estimation end-to-end.
-*   **Stack**: `React 18` · `TypeScript` · `Python`
+*   **Engineering Feat**: Built a physics-informed thermodynamic filter collapsing radar false-positives from 34.2% to 1.9%, paired with a 50,000-sample Monte Carlo resource inversion engine.
+*   **Stack**: `Python` · `NumPy/SciPy` · `React 18` · `TypeScript`
 *   <img src="https://cdn.simpleicons.org/github/00C853" width="14" alt="GitHub" /> [sruj08/amrit](https://github.com/sruj08/amrit)
 
 ---
