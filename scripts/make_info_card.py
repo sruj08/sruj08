@@ -66,9 +66,8 @@ def generate_info_card(output_path="info-card.svg", static_mode=False):
         svg.append(f'  <text x="22" y="{y_pos}" class="key">{key.lower()}</text>')
         svg.append(f'  <text x="110" y="{y_pos}" class="key" fill="#8b949e">-&gt;</text>')
         svg.append(f'  <text x="132" y="{y_pos}" class="val" fill="{color}">{val}</text>')
-        if not static_mode:
-            svg.append(f'  <animate attributeName="opacity" from="0" to="1" begin="{delay:.2f}s" dur="0.3s" fill="freeze" />')
         svg.append('</g>')
+
         
     # Terminal palette blocks at the bottom
     palette_y = start_y + 36 + len(card_data) * line_spacing + 10

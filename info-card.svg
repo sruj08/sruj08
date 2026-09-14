@@ -29,55 +29,46 @@
   <text x="22" y="90" class="key">user</text>
   <text x="110" y="90" class="key" fill="#8b949e">-&gt;</text>
   <text x="132" y="90" class="val" fill="#58a6ff">Srujan Satav (sruj08)</text>
-  <animate attributeName="opacity" from="0" to="1" begin="0.15s" dur="0.3s" fill="freeze" />
 </g>
 <g class="anim-line">
   <text x="22" y="122" class="key">roles</text>
   <text x="110" y="122" class="key" fill="#8b949e">-&gt;</text>
   <text x="132" y="122" class="val" fill="#79c0ff">Co-Founder @ Novaryn | Partner @ MindstriX</text>
-  <animate attributeName="opacity" from="0" to="1" begin="0.25s" dur="0.3s" fill="freeze" />
 </g>
 <g class="anim-line">
   <text x="22" y="154" class="key">edu</text>
   <text x="110" y="154" class="key" fill="#8b949e">-&gt;</text>
   <text x="132" y="154" class="val" fill="#d2a8ff">B.Tech ENTC @ PICT Pune (CGPA: 8.38)</text>
-  <animate attributeName="opacity" from="0" to="1" begin="0.35s" dur="0.3s" fill="freeze" />
 </g>
 <g class="anim-line">
   <text x="22" y="186" class="key">wins</text>
   <text x="110" y="186" class="key" fill="#8b949e">-&gt;</text>
   <text x="132" y="186" class="val" fill="#ffbd2e">🏆 4x Hackathon Winner (Pune Agri 15L, TechFiesta #1)</text>
-  <animate attributeName="opacity" from="0" to="1" begin="0.45s" dur="0.3s" fill="freeze" />
 </g>
 <g class="anim-line">
   <text x="22" y="218" class="key">langs</text>
   <text x="110" y="218" class="key" fill="#8b949e">-&gt;</text>
   <text x="132" y="218" class="val" fill="#7ee787">Golang, C++, C, Java, Python, Solidity, JS/TS</text>
-  <animate attributeName="opacity" from="0" to="1" begin="0.55s" dur="0.3s" fill="freeze" />
 </g>
 <g class="anim-line">
   <text x="22" y="250" class="key">backend</text>
   <text x="110" y="250" class="key" fill="#8b949e">-&gt;</text>
   <text x="132" y="250" class="val" fill="#38d430">Go Microservices, REST APIs, Docker, GCP, Firebase</text>
-  <animate attributeName="opacity" from="0" to="1" begin="0.65s" dur="0.3s" fill="freeze" />
 </g>
 <g class="anim-line">
   <text x="22" y="282" class="key">ai / ml</text>
   <text x="110" y="282" class="key" fill="#8b949e">-&gt;</text>
   <text x="132" y="282" class="val" fill="#e3b341">LLMs, RAG, LangChain, YOLOv8, OpenCV, CNN</text>
-  <animate attributeName="opacity" from="0" to="1" begin="0.75s" dur="0.3s" fill="freeze" />
 </g>
 <g class="anim-line">
   <text x="22" y="314" class="key">web3</text>
   <text x="110" y="314" class="key" fill="#8b949e">-&gt;</text>
   <text x="132" y="314" class="val" fill="#f78166">Solidity, Smart Contracts, OpenZeppelin, Sepolia</text>
-  <animate attributeName="opacity" from="0" to="1" begin="0.85s" dur="0.3s" fill="freeze" />
 </g>
 <g class="anim-line">
   <text x="22" y="346" class="key">status</text>
   <text x="110" y="346" class="key" fill="#8b949e">-&gt;</text>
   <text x="132" y="346" class="val" fill="#56d364">🟢 Building Production AI & Blockchain Systems</text>
-  <animate attributeName="opacity" from="0" to="1" begin="0.95s" dur="0.3s" fill="freeze" />
 </g>
 <g class="anim-line">
   <line x1="20" y1="376" x2="470" y2="376" stroke="#30363d" stroke-width="1" />
