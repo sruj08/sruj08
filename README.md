@@ -43,9 +43,9 @@
 </p>
 
 <p align="center">
-  <strong>1st Place</strong> / Global Agri-Tech Hackathon &nbsp;|&nbsp; 
-  <strong>Grand Champion</strong> / Sovereign Finance DevCon &nbsp;|&nbsp; 
-  <strong>Best Web3 Infra</strong> / ETHGlobal
+  <strong>AgriTech</strong> / Deep-Tech Solutions &nbsp;|&nbsp; 
+  <strong>FinTech</strong> / Disruptive Startups &nbsp;|&nbsp; 
+  <strong>Web3</strong> / Decentralized Infrastructure
 </p>
 
 ---
