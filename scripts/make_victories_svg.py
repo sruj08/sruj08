@@ -61,13 +61,6 @@ def generate_victories_svg(output_path="victories-grid.svg"):
     width = 1125
     height = 430
     
-    # We want 4 columns.
-    # Margins: 34 left, 34 right
-    # Total available width = 1125 - 68 = 1057
-    # 4 columns, 3 gaps. Gap = 20
-    # 4 * img_w + 3 * 20 = 1057 => 4 * img_w = 997 => img_w = 249.25 (let's say 248)
-    # img_h = img_w * (230/320) = 248 * 0.71875 = 178
-    
     img_w = 248
     img_h = 178
     gap = 21
@@ -76,54 +69,54 @@ def generate_victories_svg(output_path="victories-grid.svg"):
     svg = []
     svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="{width}" height="{height}" role="img" aria-label="Hackathon Victories">')
     
-    # Fonts & Styles
-    svg.append('  <style>')
-    svg.append('    .header-text { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 14px; font-weight: bold; fill: #FFB000; }')
-    svg.append('    .title-text { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 13px; font-weight: bold; fill: #e0e0e0; letter-spacing: 0px; text-transform: uppercase; }')
-    svg.append('    .rank-text { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 11px; font-weight: bold; fill: #00C853; }')
-    svg.append('    .prize-text { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 11px; fill: #666666; }')
-    svg.append('    .meta-text { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 10px; fill: #666666; letter-spacing: 1px; text-transform: uppercase; }')
-    svg.append('  </style>')
-    
     svg.append('  <defs>')
     svg.append('    <filter id="noise" x="0" y="0" width="100%" height="100%">')
     svg.append('      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/>')
     svg.append('      <feColorMatrix type="matrix" values="1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 0.05 0" />')
     svg.append('    </filter>')
+    # Duotone terminal filter for images
+    svg.append('    <filter id="duotone">')
+    svg.append('      <feColorMatrix type="matrix" values="0.33 0.33 0.33 0 0   0.33 0.33 0.33 0 0   0.33 0.33 0.33 0 0   0 0 0 1 0" result="gray" />')
+    svg.append('      <feComponentTransfer color-interpolation-filters="sRGB">')
+    svg.append('        <feFuncR type="table" tableValues="0.015 1" />')
+    svg.append('        <feFuncG type="table" tableValues="0.015 0.69" />')
+    svg.append('        <feFuncB type="table" tableValues="0.015 0" />')
+    svg.append('      </feComponentTransfer>')
+    svg.append('    </filter>')
+    
     for i in range(4):
         x = start_x + i * (img_w + gap)
         svg.append(f'    <clipPath id="clip-{i}"><rect x="{x}" y="140" width="{img_w}" height="{img_h}" rx="0" ry="0" /></clipPath>')
     svg.append('  </defs>')
     
-    # Outer Background Box & Noise Texture
+    # Outer Background Box
     svg.append(f'  <rect x="0" y="0" width="{width}" height="{height}" rx="0" fill="{BG_COLOR}" />')
     
-    # Render CAD Grid
+    # Render CAD Grid (0.5px offset)
     svg.append(f'  <g stroke="{GRID_COLOR}" stroke-width="1">')
     for y in range(0, height, 20):
-        svg.append(f'    <line x1="0" y1="{y}" x2="{width}" y2="{y}" />')
+        svg.append(f'    <line x1="0" y1="{y + 0.5}" x2="{width}" y2="{y + 0.5}" />')
     for x in range(0, width, 20):
-        svg.append(f'    <line x1="{x}" y1="0" x2="{x}" y2="{height}" />')
+        svg.append(f'    <line x1="{x + 0.5}" y1="0" x2="{x + 0.5}" y2="{height}" />')
     svg.append('  </g>')
     
     svg.append(f'  <rect x="0" y="0" width="{width}" height="{height}" fill="transparent" filter="url(#noise)" style="pointer-events: none;" />')
     svg.append(f'  <rect x="0.5" y="0.5" width="{width - 1}" height="{height - 1}" fill="none" stroke="{BORDER_COLOR}" />')
     
-    # Header Line (matching ASCII aesthetic)
-    svg.append(f'  <text x="28" y="38" class="header-text">--- sruj08@victories ----------------------------------------------------------------───────────</text>')
+    # Header Line
+    svg.append(f'  <text x="28" y="38" font-family="Fira Code, SF Mono, Consolas, Courier New, monospace" font-size="14px" font-weight="bold" fill="{ACCENT_ORANGE}">--- sruj08@victories ---------------------------------------------------------------------------</text>')
     
     # Hero Headline
     svg.append(f'  <text x="34" y="75" font-size="28" font-family="SF Mono, Consolas, Courier New, monospace" font-weight="bold" fill="#e0e0e0" letter-spacing="1">BUILT UNDER PRESSURE. PROVEN IN PUBLIC.</text>')
-    svg.append(f'  <text x="34" y="98" class="meta-text" fill="{MUTED_TEXT}">GOVT. OF MAHARASHTRA · GLOBAL / NATIONAL SCALE · 6,500+ REGISTRATIONS</text>')
+    svg.append(f'  <text x="34" y="98" font-family="SF Mono, Consolas, Courier New, monospace" font-size="10px" fill="{MUTED_TEXT}" letter-spacing="1" text-transform="uppercase">GOVT. OF MAHARASHTRA · GLOBAL / NATIONAL SCALE · 6,500+ REGISTRATIONS</text>')
     
-    # Architectural Grid System & Crosshairs
+    # Architectural Grid System & Crosshairs (0.5px offset)
     svg.append(f'  <g stroke="{BORDER_COLOR}" stroke-width="1">')
     for i in range(5):
         cx = start_x - (gap//2) + i * (img_w + gap)
         if i == 0: cx = 0
         if i == 4: cx = width
-        # Vertical lines (subtle grid)
-        svg.append(f'    <line x1="{cx}" y1="0" x2="{cx}" y2="{height}" stroke-dasharray="2 2" stroke-opacity="0.8"/>')
+        svg.append(f'    <line x1="{cx + 0.5}" y1="0" x2="{cx + 0.5}" y2="{height}" stroke-dasharray="2 2" stroke-opacity="0.8"/>')
     svg.append('  </g>')
     
     meta_tags = ["[ 01 // AGR ]", "[ 02 // TCF ]", "[ 03 // VIS ]", "[ 04 // IQO ]"]
@@ -133,38 +126,34 @@ def generate_victories_svg(output_path="victories-grid.svg"):
         y = 140
         
         # Meta Tag
-        svg.append(f'  <text x="{x}" y="{y - 8}" class="meta-text">{meta_tags[i]}</text>')
+        svg.append(f'  <text x="{x}" y="{y - 8}" font-family="SF Mono, Consolas, Courier New, monospace" font-size="10px" fill="{MUTED_TEXT}" letter-spacing="1" text-transform="uppercase">{meta_tags[i]}</text>')
         
         # Image
-        # Generate at 3x resolution for crisp rendering on Retina displays
         b64 = image_to_base64(FILES[i], target_size=(img_w * 3, img_h * 3))
         if b64:
-            svg.append(f'  <image href="{b64}" x="{x}" y="{y}" width="{img_w}" height="{img_h}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-{i})" />')
+            # Apply duotone filter to images
+            svg.append(f'  <image href="{b64}" x="{x}" y="{y}" width="{img_w}" height="{img_h}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-{i})" filter="url(#duotone)" />')
         
-        # Image Border (Sharp corners)
-        svg.append(f'  <rect x="{x}" y="{y}" width="{img_w}" height="{img_h}" rx="0" ry="0" fill="none" stroke="{IMAGE_BORDER}" stroke-width="1" />')
+        # Image Border
+        svg.append(f'  <rect x="{x + 0.5}" y="{y + 0.5}" width="{img_w}" height="{img_h}" rx="0" ry="0" fill="none" stroke="{IMAGE_BORDER}" stroke-width="1" />')
         
-        # Transition Divider (Hairline + Accent Tick)
-        svg.append(f'  <line x1="{x}" y1="{y + img_h + 20}" x2="{x + img_w}" y2="{y + img_h + 20}" stroke="{IMAGE_BORDER}" stroke-width="1" />')
-        svg.append(f'  <line x1="{x}" y1="{y + img_h + 20}" x2="{x + 15}" y2="{y + img_h + 20}" stroke="{ACCENT_GREEN}" stroke-width="2" />')
+        # Transition Divider
+        svg.append(f'  <line x1="{x}" y1="{y + img_h + 20 + 0.5}" x2="{x + img_w}" y2="{y + img_h + 20 + 0.5}" stroke="{IMAGE_BORDER}" stroke-width="1" />')
+        svg.append(f'  <line x1="{x}" y1="{y + img_h + 20 + 0.5}" x2="{x + 15}" y2="{y + img_h + 20 + 0.5}" stroke="{ACCENT_GREEN}" stroke-width="2" />')
         
         # Title
-        svg.append(f'  <text x="{x}" y="{y + img_h + 45}" class="title-text">{TITLES[i]}</text>')
+        svg.append(f'  <text x="{x}" y="{y + img_h + 45}" font-family="SF Mono, Consolas, Courier New, monospace" font-size="13px" font-weight="bold" fill="{TEXT_COLOR}" letter-spacing="0px" text-transform="uppercase">{TITLES[i]}</text>')
         
         # Rank & Prize
-        svg.append(f'  <text x="{x}" y="{y + img_h + 65}"><tspan class="rank-text">{RANKS[i]}</tspan><tspan class="prize-text"> · {PRIZES[i]}</tspan></text>')
+        svg.append(f'  <text x="{x}" y="{y + img_h + 65}"><tspan font-family="SF Mono, Consolas, Courier New, monospace" font-size="11px" font-weight="bold" fill="{ACCENT_GREEN}">{RANKS[i]}</tspan><tspan font-family="SF Mono, Consolas, Courier New, monospace" font-size="11px" fill="{MUTED_TEXT}"> · {PRIZES[i]}</tspan></text>')
         
         # Crosshairs around images
         ch_len = 5
         ch_color = "#4a5368"
-        # Top Left
-        svg.append(f'  <path d="M {x-ch_len} {y} L {x+ch_len} {y} M {x} {y-ch_len} L {x} {y+ch_len}" stroke="{ch_color}" stroke-width="1"/>')
-        # Top Right
-        svg.append(f'  <path d="M {x+img_w-ch_len} {y} L {x+img_w+ch_len} {y} M {x+img_w} {y-ch_len} L {x+img_w} {y+ch_len}" stroke="{ch_color}" stroke-width="1"/>')
-        # Bottom Left
-        svg.append(f'  <path d="M {x-ch_len} {y+img_h} L {x+ch_len} {y+img_h} M {x} {y+img_h-ch_len} L {x} {y+img_h+ch_len}" stroke="{ch_color}" stroke-width="1"/>')
-        # Bottom Right
-        svg.append(f'  <path d="M {x+img_w-ch_len} {y+img_h} L {x+img_w+ch_len} {y+img_h} M {x+img_w} {y+img_h-ch_len} L {x+img_w} {y+img_h+ch_len}" stroke="{ch_color}" stroke-width="1"/>')
+        svg.append(f'  <path d="M {x-ch_len} {y+0.5} L {x+ch_len} {y+0.5} M {x+0.5} {y-ch_len} L {x+0.5} {y+ch_len}" stroke="{ch_color}" stroke-width="1"/>')
+        svg.append(f'  <path d="M {x+img_w-ch_len} {y+0.5} L {x+img_w+ch_len} {y+0.5} M {x+img_w+0.5} {y-ch_len} L {x+img_w+0.5} {y+ch_len}" stroke="{ch_color}" stroke-width="1"/>')
+        svg.append(f'  <path d="M {x-ch_len} {y+img_h+0.5} L {x+ch_len} {y+img_h+0.5} M {x+0.5} {y+img_h-ch_len} L {x+0.5} {y+img_h+ch_len}" stroke="{ch_color}" stroke-width="1"/>')
+        svg.append(f'  <path d="M {x+img_w-ch_len} {y+img_h+0.5} L {x+img_w+ch_len} {y+img_h+0.5} M {x+img_w+0.5} {y+img_h-ch_len} L {x+img_w+0.5} {y+img_h+ch_len}" stroke="{ch_color}" stroke-width="1"/>')
 
     svg.append('</svg>')
     

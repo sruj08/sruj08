@@ -2,7 +2,8 @@ import os
 import json
 from datetime import datetime
 
-PALETTE = ["#040404", "#003b14", "#006d25", "#00a238", "#00c853", "#39ff84"]
+# Desaturated max green
+PALETTE = ["#040404", "#003b14", "#006d25", "#00a238", "#00c853", "#00e55d"]
 
 def render_heatmap_svg(data_path="data/contributions.json", output_svg="contrib-heatmap.svg"):
     if not os.path.exists(data_path):
@@ -29,14 +30,6 @@ def render_heatmap_svg(data_path="data/contributions.json", output_svg="contrib-
     
     svg = []
     svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {svg_width} {svg_height}" width="{svg_width}" height="{svg_height}">')
-    svg.append('<style>')
-    svg.append('  .bg { fill: #040404; rx: 0px; ry: 0px; stroke: #1a1a1a; stroke-width: 1px; }')
-    svg.append('  .title { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 14px; font-weight: bold; fill: #FFB000; }')
-    svg.append('  .day-rect { rx: 0px; ry: 0px; opacity: 1; }')
-    svg.append('  .label { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 10px; fill: #666666; text-transform: uppercase; }')
-    svg.append('  .stats { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 11px; font-weight: bold; fill: #00c853; text-transform: uppercase; }')
-    svg.append('  .legend-text { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 10px; fill: #666666; text-transform: uppercase; }')
-    svg.append('</style>')
     
     svg.append('  <defs>')
     svg.append('    <filter id="noise" x="0" y="0" width="100%" height="100%">')
@@ -45,21 +38,21 @@ def render_heatmap_svg(data_path="data/contributions.json", output_svg="contrib-
     svg.append('    </filter>')
     svg.append('  </defs>')
     
-    # Outer terminal box & Noise Texture
-    svg.append(f'<rect width="{svg_width}" height="{svg_height}" class="bg" />')
+    # Outer terminal box
+    svg.append(f'<rect x="0.5" y="0.5" width="{svg_width - 1}" height="{svg_height - 1}" fill="#040404" rx="0" ry="0" stroke="#1a1a1a" stroke-width="1px" />')
     
-    # Render CAD Grid
+    # Render CAD Grid (0.5px offset)
     svg.append(f'  <g stroke="#0f0f0f" stroke-width="1">')
     for y in range(0, svg_height, 20):
-        svg.append(f'    <line x1="0" y1="{y}" x2="{svg_width}" y2="{y}" />')
+        svg.append(f'    <line x1="0" y1="{y + 0.5}" x2="{svg_width}" y2="{y + 0.5}" />')
     for x in range(0, svg_width, 20):
-        svg.append(f'    <line x1="{x}" y1="0" x2="{x}" y2="{svg_height}" />')
+        svg.append(f'    <line x1="{x + 0.5}" y1="0" x2="{x + 0.5}" y2="{svg_height}" />')
     svg.append('  </g>')
     
     svg.append(f'<rect width="{svg_width}" height="{svg_height}" fill="transparent" filter="url(#noise)" style="pointer-events: none;" rx="0" ry="0" />')
     
     # Header Line
-    svg.append(f'<text x="28" y="38" class="title">--- sruj08@contributions -----------------------------------------------------------───────────</text>')
+    svg.append(f'<text x="28" y="38" font-family="Fira Code, SF Mono, Consolas, Courier New, monospace" font-size="14px" font-weight="bold" fill="#FFB000">--- sruj08@contributions ----------------------------------------------------------------------</text>')
     
     weeks = [[] for _ in range(53)]
     for idx, d in enumerate(days):
@@ -74,22 +67,22 @@ def render_heatmap_svg(data_path="data/contributions.json", output_svg="contrib-
             level = min(max(level, 0), len(PALETTE) - 1)
             fill_color = PALETTE[level]
             
-            svg.append(f'<rect x="{x_pos}" y="{y_pos}" width="{box_size}" height="{box_size}" fill="{fill_color}" class="day-rect">')
+            svg.append(f'<rect x="{x_pos + 0.5}" y="{y_pos + 0.5}" width="{box_size}" height="{box_size}" fill="{fill_color}" rx="0" ry="0" opacity="1">')
             svg.append(f'  <title>{day_data.get("count", 0)} contributions on {day_data.get("date", "")}</title>')
             svg.append('</rect>')
             
     # Stats footer along bottom left
     footer_y = origin_y + 7 * step + 22
     stats_str = f"⚡ {total_contribs:,} contributions in the last year | Current Streak: {current_streak} days | Best Streak: {longest_streak} days"
-    svg.append(f'<text x="{origin_x}" y="{footer_y}" class="stats">{stats_str}</text>')
+    svg.append(f'<text x="{origin_x}" y="{footer_y}" font-family="Fira Code, SF Mono, Consolas, Courier New, monospace" font-size="11px" font-weight="bold" fill="#00c853" text-transform="uppercase">{stats_str}</text>')
     
     # Legend along bottom right
     legend_x = svg_width - 180
-    svg.append(f'<text x="{legend_x - 32}" y="{footer_y}" class="legend-text">Less</text>')
+    svg.append(f'<text x="{legend_x - 32}" y="{footer_y}" font-family="Fira Code, SF Mono, Consolas, Courier New, monospace" font-size="10px" fill="#666666" text-transform="uppercase">Less</text>')
     for idx, col in enumerate(PALETTE):
         lx = legend_x + idx * (box_size + 3)
-        svg.append(f'<rect x="{lx}" y="{footer_y - 9}" width="{box_size}" height="{box_size}" rx="0" fill="{col}" />')
-    svg.append(f'<text x="{legend_x + len(PALETTE) * (box_size + 3) + 6}" y="{footer_y}" class="legend-text">More</text>')
+        svg.append(f'<rect x="{lx + 0.5}" y="{footer_y - 9 + 0.5}" width="{box_size}" height="{box_size}" rx="0" fill="{col}" />')
+    svg.append(f'<text x="{legend_x + len(PALETTE) * (box_size + 3) + 6}" y="{footer_y}" font-family="Fira Code, SF Mono, Consolas, Courier New, monospace" font-size="10px" fill="#666666" text-transform="uppercase">More</text>')
     
     svg.append('</svg>')
     
