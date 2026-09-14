@@ -118,7 +118,7 @@ def generate_ascii_experience(output_path="ascii-experience.svg"):
 
 def main():
     generate_ascii_about("ascii-about.svg")
-    generate_ascii_achievements("ascii-achievements.svg")
+    # generate_ascii_achievements("ascii-achievements.svg")
     generate_ascii_techstack("ascii-techstack.svg")
     generate_ascii_projects("ascii-projects.svg")
     generate_ascii_experience("ascii-experience.svg")
