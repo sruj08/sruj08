@@ -1,7 +1,7 @@
 import os
 import json
 
-PALETTE = ["#161b22", "#0e4429", "#006d32", "#26a641", "#3fb950", "#56d364"]
+PALETTE = ["#111317", "#0e4429", "#006d32", "#26a641", "#00C853", "#00ff66"]
 
 def generate_heatmap_svg(data_path="data/contributions.json", output_svg="contrib-heatmap.svg"):
     if not os.path.exists(data_path):
@@ -28,13 +28,13 @@ def generate_heatmap_svg(data_path="data/contributions.json", output_svg="contri
     
     svg = []
     svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {svg_width} {svg_height}" width="{svg_width}" height="{svg_height}" role="img">')
-    svg.append(f'  <rect x="0.5" y="0.5" width="{svg_width - 1}" height="{svg_height - 1}" rx="8" fill="#0d1117" stroke="#30363d"/>')
+    svg.append(f'  <rect x="0.5" y="0.5" width="{svg_width - 1}" height="{svg_height - 1}" rx="8" fill="#0a0b0d" stroke="#21252e"/>')
     
     svg.append('<style>')
-    svg.append('  .day-rect { rx: 2.5px; ry: 2.5px; }')
-    svg.append('  .header-text { font-family: "Consolas", "Menlo", "DejaVu Sans Mono", monospace; font-size: 14px; font-weight: bold; fill: #58a6ff; }')
-    svg.append('  .stats-text { font-family: "Consolas", "Menlo", "DejaVu Sans Mono", monospace; font-size: 12px; fill: #3fb950; font-weight: 600; }')
-    svg.append('  .legend-text { font-family: "Consolas", "Menlo", "DejaVu Sans Mono", monospace; font-size: 11px; fill: #8b949e; }')
+    svg.append('  .day-rect { rx: 2px; ry: 2px; }')
+    svg.append('  .header-text { font-family: "SF Mono", "Consolas", "Menlo", monospace; font-size: 14px; font-weight: bold; fill: #FF6B00; }')
+    svg.append('  .stats-text { font-family: "SF Mono", "Consolas", "Menlo", monospace; font-size: 12px; fill: #00C853; font-weight: 600; }')
+    svg.append('  .legend-text { font-family: "SF Mono", "Consolas", "Menlo", monospace; font-size: 11px; fill: #7d8a9e; }')
     svg.append('</style>')
     
     header_str = f"--- sruj08@contributions ---------------------------------------------------------------------------"

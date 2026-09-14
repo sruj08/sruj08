@@ -1,12 +1,13 @@
 import os
 import xml.etree.ElementTree as ET
 
-BG_COLOR = "#0d1117"
-BORDER_COLOR = "#30363d"
-CARD_BG = "#161b22"
-HEADER_COLOR = "#58a6ff"
-TEXT_COLOR = "#f0f6fc"
-MUTED_TEXT = "#8b949e"
+BG_COLOR = "#0a0b0d" # Deep Slate Charcoal
+BORDER_COLOR = "#21252e" # Hairline Divider
+CARD_BG = "#111317" # Elevated Surface
+HEADER_COLOR = "#FF6B00" # Tactical Orange
+TEXT_COLOR = "#f4f5f7" # Signature Off-White
+MUTED_TEXT = "#7d8a9e" # Muted Slate-Gray
+ICON_BG = "#171a21" # High Contrast Slate
 
 BRAND_COLORS = {
     "python": "#3776AB",
@@ -47,9 +48,9 @@ def generate_apple_hig_tech_card(output_path="tech-stack.svg"):
     svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-label="Official Tech Stack">')
     
     svg.append('  <style>')
-    svg.append('    .header-title { font-family: "Consolas", "Menlo", "DejaVu Sans Mono", monospace; font-size: 14px; font-weight: bold; fill: #58a6ff; }')
-    svg.append('    .tech-title { font-family: "Consolas", "Menlo", "DejaVu Sans Mono", monospace; font-size: 13px; font-weight: bold; fill: #f0f6fc; }')
-    svg.append('    .tech-subtitle { font-family: "Consolas", "Menlo", "DejaVu Sans Mono", monospace; font-size: 11px; fill: #8b949e; }')
+    svg.append('    .header-title { font-family: "SF Mono", "Consolas", "Menlo", monospace; font-size: 14px; font-weight: bold; fill: #FF6B00; }')
+    svg.append('    .tech-title { font-family: "SF Pro Display", "Inter", sans-serif; font-size: 13px; font-weight: 800; fill: #f4f5f7; }')
+    svg.append('    .tech-subtitle { font-family: "SF Mono", "Consolas", "Menlo", monospace; font-size: 11px; fill: #7d8a9e; }')
     svg.append('  </style>')
     
     # Outer Background Box
@@ -85,14 +86,14 @@ def generate_apple_hig_tech_card(output_path="tech-stack.svg"):
         
         svg_file = os.path.join("assets/logos", f"{key}.svg")
         path_data = extract_path_data(svg_file)
-        brand_color = BRAND_COLORS.get(key, "#58a6ff")
+        brand_color = BRAND_COLORS.get(key, "#00C853")
         
         svg.append(f'  <g>')
         # Glassmorphic Inner Tile
         svg.append(f'    <rect x="{x}" y="{y}" width="332" height="58" rx="8" fill="{CARD_BG}" stroke="{BORDER_COLOR}" stroke-width="1"/>')
         
         # Icon Background Tile
-        svg.append(f'    <rect x="{x + 10}" y="{y + 9}" width="40" height="40" rx="6" fill="#1c2538" stroke="{BORDER_COLOR}" stroke-width="0.75"/>')
+        svg.append(f'    <rect x="{x + 10}" y="{y + 9}" width="40" height="40" rx="6" fill="{ICON_BG}" stroke="{BORDER_COLOR}" stroke-width="0.75"/>')
         
         # Embedded Downloaded Official SimpleIcons SVG
         svg.append(f'    <g transform="translate({x + 18}, {y + 17})" fill="{brand_color}">')

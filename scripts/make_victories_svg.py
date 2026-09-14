@@ -4,13 +4,13 @@ from io import BytesIO
 from PIL import Image, ImageOps
 import xml.etree.ElementTree as ET
 
-BG_COLOR = "#0d1117"
-BORDER_COLOR = "#30363d"
-ACCENT_BLUE = "#58a6ff"
-ACCENT_GREEN = "#3fb950"
-TEXT_COLOR = "#f0f6fc"
-MUTED_TEXT = "#8b949e"
-IMAGE_BORDER = "#21262d"
+BG_COLOR = "#0a0b0d" # Deep Slate Charcoal
+BORDER_COLOR = "#21252e" # Hairline Divider
+ACCENT_GREEN = "#00C853" # Matrix Neon Green
+ACCENT_ORANGE = "#FF6B00" # Industrial Orange
+TEXT_COLOR = "#f4f5f7" # Signature Off-White
+MUTED_TEXT = "#7d8a9e" # Muted Slate-Gray
+IMAGE_BORDER = "#333948" # Active Highlight
 
 FILES = [
     "assets/victories/pune_agri.png",
@@ -77,11 +77,11 @@ def generate_victories_svg(output_path="victories-grid.svg"):
     
     # Fonts & Styles
     svg.append('  <style>')
-    svg.append('    .header-text { font-family: "Consolas", "Menlo", "DejaVu Sans Mono", monospace; font-size: 14px; font-weight: bold; fill: #58a6ff; }')
-    svg.append('    .title-text { font-family: "Consolas", "Menlo", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: bold; fill: #f0f6fc; }')
-    svg.append('    .rank-text { font-family: "Consolas", "Menlo", "DejaVu Sans Mono", monospace; font-size: 11px; font-weight: bold; fill: #3fb950; }')
-    svg.append('    .prize-text { font-family: "Consolas", "Menlo", "DejaVu Sans Mono", monospace; font-size: 11px; fill: #8b949e; }')
-    svg.append('    .meta-text { font-family: "Consolas", "Menlo", "DejaVu Sans Mono", monospace; font-size: 10px; fill: #555555; letter-spacing: 1px; }')
+    svg.append('    .header-text { font-family: "SF Mono", "Consolas", "Menlo", monospace; font-size: 14px; font-weight: bold; fill: #FF6B00; }')
+    svg.append('    .title-text { font-family: "SF Pro Display", "Inter", sans-serif; font-size: 13px; font-weight: 800; fill: #f4f5f7; letter-spacing: 0.5px; }')
+    svg.append('    .rank-text { font-family: "SF Mono", "Consolas", "Menlo", monospace; font-size: 11px; font-weight: bold; fill: #00C853; }')
+    svg.append('    .prize-text { font-family: "SF Mono", "Consolas", "Menlo", monospace; font-size: 11px; fill: #7d8a9e; }')
+    svg.append('    .meta-text { font-family: "SF Mono", "Consolas", "Menlo", monospace; font-size: 10px; fill: #7d8a9e; letter-spacing: 1px; }')
     svg.append('  </style>')
     
     svg.append('  <defs>')
@@ -130,7 +130,7 @@ def generate_victories_svg(output_path="victories-grid.svg"):
         
         # Transition Divider
         svg.append(f'  <line x1="{x}" y1="{y + img_h + 20}" x2="{x + img_w}" y2="{y + img_h + 20}" stroke="{IMAGE_BORDER}" stroke-width="1" />')
-        svg.append(f'  <line x1="{x}" y1="{y + img_h + 20}" x2="{x + 30}" y2="{y + img_h + 20}" stroke="{ACCENT_BLUE}" stroke-width="2" />')
+        svg.append(f'  <line x1="{x}" y1="{y + img_h + 20}" x2="{x + 30}" y2="{y + img_h + 20}" stroke="{ACCENT_GREEN}" stroke-width="2" />')
         
         # Title
         svg.append(f'  <text x="{x}" y="{y + img_h + 45}" class="title-text">{TITLES[i]}</text>')
@@ -140,7 +140,7 @@ def generate_victories_svg(output_path="victories-grid.svg"):
         
         # Crosshairs around images
         ch_len = 5
-        ch_color = "#30363d"
+        ch_color = "#4a5368"
         # Top Left
         svg.append(f'  <path d="M {x-ch_len} {y} L {x+ch_len} {y} M {x} {y-ch_len} L {x} {y+ch_len}" stroke="{ch_color}" stroke-width="1"/>')
         # Top Right
