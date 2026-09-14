@@ -26,11 +26,11 @@ jobs:
 
       - run: python scripts/make_all_ascii_svgs.py
 
-      - run: python scripts/make_professional_tech_svg.py
+      - run: python scripts/make_cinematic_tech_stack.py
 
       - run: python scripts/make_animated_heatmap.py
 
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: refresh contribution graph and profile art [skip ci]"
-          file_pattern: "data/contributions.json ascii-*.svg tech-stack-professional.svg contrib-heatmap.svg"
+          file_pattern: "data/contributions.json ascii-*.svg tech-stack-cinematic.svg contrib-heatmap.svg"

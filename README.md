@@ -16,7 +16,7 @@
 
 <br><br>
 
-<img src="tech-stack-professional.svg" width="100%" alt="sruj08 Technical Stack" />
+<img src="tech-stack-cinematic.svg" width="100%" alt="sruj08 Technical Stack" />
 
 <br><br>
 
