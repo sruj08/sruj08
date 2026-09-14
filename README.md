@@ -65,7 +65,7 @@
 
 *   **Engineering Feat**: Engineered a bi-temporal SQLite engine with Ed25519 signed obligations and recursive graph queries to ensure tamper-proof, "as-of" regulatory auditing.
 *   **Stack**: `Go` · `SQLite` · `OPA/Rego` · `Claude-3.5-Sonnet` · `Next.js 16`
-*   <img src="https://cdn.simpleicons.org/github/00C853" width="14" alt="GitHub" /> [sruj08/Aegis](https://github.com/sruj08/Aegis)
+*   <img src="icons/github.svg" width="14" alt="GitHub" /> [mridulbansal4/Chanakya](https://github.com/mridulbansal4/Chanakya)
 <br>
 
 #### **03. AMRIT** | *Advanced Mission Resource Intelligence Tool (ISRO)*
