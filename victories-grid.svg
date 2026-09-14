@@ -6,11 +6,12 @@
     </filter>
     <filter id="duotone">
       <feColorMatrix type="matrix" values="0.33 0.33 0.33 0 0   0.33 0.33 0.33 0 0   0.33 0.33 0.33 0 0   0 0 0 1 0" result="gray" />
-      <feComponentTransfer color-interpolation-filters="sRGB">
+      <feComponentTransfer color-interpolation-filters="sRGB" result="colorized">
         <feFuncR type="table" tableValues="0.015 1" />
         <feFuncG type="table" tableValues="0.015 0.69" />
         <feFuncB type="table" tableValues="0.015 0" />
       </feComponentTransfer>
+      <feComposite in="colorized" in2="SourceGraphic" operator="arithmetic" k1="0" k2="0.4" k3="0.6" k4="0" />
     </filter>
     <clipPath id="clip-0"><rect x="34" y="140" width="248" height="178" rx="0" ry="0" /></clipPath>
     <clipPath id="clip-1"><rect x="303" y="140" width="248" height="178" rx="0" ry="0" /></clipPath>

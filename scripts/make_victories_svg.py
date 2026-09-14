@@ -77,11 +77,12 @@ def generate_victories_svg(output_path="victories-grid.svg"):
     # Duotone terminal filter for images
     svg.append('    <filter id="duotone">')
     svg.append('      <feColorMatrix type="matrix" values="0.33 0.33 0.33 0 0   0.33 0.33 0.33 0 0   0.33 0.33 0.33 0 0   0 0 0 1 0" result="gray" />')
-    svg.append('      <feComponentTransfer color-interpolation-filters="sRGB">')
+    svg.append('      <feComponentTransfer color-interpolation-filters="sRGB" result="colorized">')
     svg.append('        <feFuncR type="table" tableValues="0.015 1" />')
     svg.append('        <feFuncG type="table" tableValues="0.015 0.69" />')
     svg.append('        <feFuncB type="table" tableValues="0.015 0" />')
     svg.append('      </feComponentTransfer>')
+    svg.append('      <feComposite in="colorized" in2="SourceGraphic" operator="arithmetic" k1="0" k2="0.4" k3="0.6" k4="0" />')
     svg.append('    </filter>')
     
     for i in range(4):

@@ -36,7 +36,7 @@
 
 *   **Engineering Feat**: Implemented Opus codec for offline edge compression, optimizing 2G payloads by 78%, alongside a deterministic risk engine for 3-5 day disease forecasting.
 *   **Stack**: `PyTorch` · `YOLOv8` · `LangChain` · `Flask` · `React`
-*   <img src="assets/socials/github.svg" width="14" alt="GitHub" align="center" /> [sruj08/KrishiSahAI](https://github.com/sruj08/KrishiSahAI)
+*   [<img src="assets/socials/github.svg" width="14" alt="GitHub" align="center" />](https://github.com/sruj08/KrishiSahAI)
 <br>
 
 #### **02. CHANAKYA** | *Sovereign Regulatory Operating System (RegOS)*
@@ -44,7 +44,7 @@
 
 *   **Engineering Feat**: Engineered a bi-temporal SQLite engine with application-level Ed25519 signed obligations and recursive graph queries to ensure tamper-proof, "as-of" regulatory auditing.
 *   **Stack**: `Go` · `SQLite` · `OPA/Rego` · `Claude-3.5-Sonnet` · `Next.js 16`
-*   <img src="assets/socials/github.svg" width="14" alt="GitHub" align="center" /> [mridulbansal4/Chanakya](https://github.com/mridulbansal4/Chanakya)
+*   [<img src="assets/socials/github.svg" width="14" alt="GitHub" align="center" />](https://github.com/mridulbansal4/Chanakya)
 <br>
 
 #### **03. AMRIT** | *Advanced Mission Resource Intelligence Tool (ISRO)*
@@ -52,7 +52,7 @@
 
 *   **Engineering Feat**: Built a physics-informed electromagnetic scattering model collapsing radar false-positives from 34.2% to 1.9%, paired with a 50,000-sample Monte Carlo resource inversion engine.
 *   **Stack**: `Python` · `NumPy/SciPy` · `React 18` · `TypeScript`
-*   <img src="assets/socials/github.svg" width="14" alt="GitHub" align="center" /> [sruj08/amrit](https://github.com/sruj08/amrit)
+*   [<img src="assets/socials/github.svg" width="14" alt="GitHub" align="center" />](https://github.com/sruj08/amrit)
 
 ---
 
