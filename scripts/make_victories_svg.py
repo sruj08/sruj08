@@ -49,7 +49,7 @@ def image_to_base64(filepath, target_size=(320, 230)):
             # Crop to aspect ratio then resize
             img = ImageOps.fit(img, target_size, method=Image.Resampling.LANCZOS)
             buffered = BytesIO()
-            img.save(buffered, format="JPEG", quality=75)
+            img.save(buffered, format="JPEG", quality=98)
             img_str = base64.b64encode(buffered.getvalue()).decode("utf-8")
             return f"data:image/jpeg;base64,{img_str}"
     except Exception as e:
@@ -120,7 +120,8 @@ def generate_victories_svg(output_path="ascii-achievements.svg"):
         svg.append(f'  <text x="{x}" y="{y - 8}" class="meta-text">{meta_tags[i]}</text>')
         
         # Image
-        b64 = image_to_base64(FILES[i], target_size=(img_w, img_h))
+        # Generate at 3x resolution for crisp rendering on Retina displays
+        b64 = image_to_base64(FILES[i], target_size=(img_w * 3, img_h * 3))
         if b64:
             svg.append(f'  <image href="{b64}" x="{x}" y="{y}" width="{img_w}" height="{img_h}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-{i})" />')
         
