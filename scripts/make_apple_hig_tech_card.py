@@ -39,7 +39,7 @@ def extract_path_data(svg_file):
         print(f"Error parsing {svg_file}: {e}")
         return ""
 
-def generate_apple_hig_tech_card(output_path="tech-stack-professional.svg"):
+def generate_apple_hig_tech_card(output_path="tech-stack.svg"):
     width = 1125
     height = 290
     
