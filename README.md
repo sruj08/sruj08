@@ -18,10 +18,10 @@
 
 <!-- SOCIAL LINKS (FRICTIONLESS CONTACT) -->
 <p align="center">
-  <a href="https://linkedin.com/in/satavsrujan"><img src="icons/linkedin.svg" width="16" alt="LinkedIn" align="center" /> [ LINKEDIN ]</a> &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="mailto:satavsrujan@gmail.com"><img src="icons/gmail.svg" width="16" alt="Email" align="center" /> [ EMAIL ]</a> &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="https://leetcode.com/sruj08"><img src="icons/leetcode.svg" width="16" alt="LeetCode" align="center" /> [ LEETCODE ]</a> &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="https://github.com/sruj08"><img src="icons/github.svg" width="16" alt="GitHub" align="center" /> [ GITHUB ]</a>
+  <a href="https://linkedin.com/in/satavsrujan"><img src="assets/socials/linkedin.svg?v=1" alt="LinkedIn" /></a> &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="mailto:satavsrujan@gmail.com"><img src="assets/socials/email.svg?v=1" alt="Email" /></a> &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://leetcode.com/sruj08"><img src="assets/socials/leetcode.svg?v=1" alt="LeetCode" /></a> &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://github.com/sruj08"><img src="assets/socials/github.svg?v=1" alt="GitHub" /></a>
 </p>
 
 ---
