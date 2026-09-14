@@ -28,11 +28,11 @@
 
 ### OPERATING PHILOSOPHY
 
-> *"Most engineers build for the roadmap. I build for the runway—optimizing for engineering velocity when survival is on the line, and scaling systems to 10M+ requests when the market demands it. I don’t want a comfortable 9-to-5; I want high-stakes technical problems, an aggressive shipping cadence, and heavy equity in what we build."*
+> *"Backend engineer grounded in data structures, algorithms, and distributed systems; owns production architecture end to end, from design through deployment. Collaborates across engineering, government, and industry stakeholders to ship real-world systems under tight deadlines."*
 
-*   **Zero-to-One Mindset**: Specialized in translating ambiguous, high-stakes real-world problems into production-grade distributed architectures.
-*   **Sovereign Systems**: Focused on building decentralized protocol designs, sovereign financial intelligence, and low-bandwidth AI edge services.
-*   **Rapid Prototyping & Scale**: Proven record of spinning up hyper-resilient microservices and deploying them onto bare-metal or cloud infrastructure within weekend timeframes.
+*   **Zero-to-One Architecture**: Translating ambiguous domain requirements into deployable software across agriculture, fintech, cybersecurity, and governance.
+*   **Production Deployment**: Driving architecture decisions across AI, blockchain, and satellite-data platforms, balancing scalability with delivery speed.
+*   **Proven Execution**: Led engineering teams to top ranks across 2,000+ competitor national and international hackathons.
 
 ---
 
@@ -52,28 +52,28 @@
 
 ### FEATURED PROJECTS (EVIDENCE OF EXECUTION)
 
-#### **01. Krishi Sahai (कृषि सहाय)** | *AI Agricultural Intelligence*
-> Multilingual, voice-first autonomous agent running on low-bandwidth networks to diagnose crop disease and optimize micro-nutrient distribution in real-time.
+#### **01. Krishi SahAI (कृषि सहाय)** | *GenAI · YOLOv8 · LangChain · Flask · React*
+> Full-stack intelligence platform combining a 38-class crop-disease classifier, YOLOv8 pest detection, and real-time advisory generation.
 
-*   **Engineering Feat**: Designed an offline-first vector cache and speech-to-speech compression loop that reduces payload sizes by 78%, allowing farmers with 2G connections to receive localized agronomic advice.
-*   **Stack**: `FastAPI` · `PyTorch` · `LangChain` · `Whisper-API` · `PostgreSQL`
-*   [Live Demo](https://github.com/sruj08/KrishiSahAI) | [Codebase](https://github.com/sruj08/KrishiSahAI)
+*   **Architecture**: Built an LLM-orchestrated recommendation engine and a modular Flask backend with Firebase authentication.
+*   **Target**: The definitive AI platform for Indian farmers, scaling from smallholders to progressive agripreneurs.
+*   <img src="https://cdn.simpleicons.org/github/00C853" width="14" alt="GitHub" /> [sruj08/KrishiSahAI](https://github.com/sruj08/KrishiSahAI)
 <br>
 
-#### **02. Chanakya (चाणक्य)** | *Sovereign Geopolitical & Macro Engine*
-> An enterprise-grade sovereign intelligence engine running custom RAG pipelines to ingest daily macroeconomic policies and backtest algorithmic risk hedges for Sovereign Wealth Funds.
+#### **02. CHANAKYA (चाणक्य)** | *AI-Powered Regulatory Intelligence Platform*
+> Architected full-stack platform with modular backend APIs and investigator dashboards for the SEBI Hackathon.
 
-*   **Engineering Feat**: Built a custom streaming gRPC ingest pipeline processing 10k+ international policy pages per second with real-time vector embeddings and semantic graph node updates.
-*   **Stack**: `Go` · `gRPC` · `Claude-3.5-Sonnet` · `Qdrant` · `TimescaleDB`
-*   [Interactive UI](https://github.com/sruj08/Aegis) | [Architecture Paper](https://github.com/sruj08/Aegis)
+*   **Architecture**: Enables regulators to analyze market activity via AI-assisted, auditable workflows.
+*   **Target**: Built for scalable case-loads and complex regulatory oversight.
+*   *(Internal/Private Codebase)*
 <br>
 
-#### **03. Amrit (अमृत)** | *Decentralized Resource Ledger*
-> A decentralized, trustless water and emergency resource distribution ledger preventing supply-chain manipulation in extreme drought zones.
+#### **03. AMRIT (अमृत)** | *Advanced Mission Resource Intelligence Tool*
+> A mission-intelligence platform that turns Chandrayaan-2 DFSAR radar into actionable landing recommendations (ISRO Bharatiya Antariksh 2026).
 
-*   **Engineering Feat**: Wrote zero-gas-fee consensus smart contracts running on localized nodes, enabling local councils to track and verify physical resource drops with zero double-allocation.
-*   **Stack**: `Solidity` · `Rust` · `React` · `Ethers.js` · `IPFS`
-*   [Contract Audit](https://github.com/sruj08/amrit) | [Codebase](https://github.com/sruj08/amrit)
+*   **Architecture**: Calibrated ice-likelihood, propagated uncertainty, power-aware rover traverses, and Monte-Carlo resource estimation end-to-end.
+*   **Stack**: `React 18` · `TypeScript` · `Python`
+*   <img src="https://cdn.simpleicons.org/github/00C853" width="14" alt="GitHub" /> [sruj08/amrit](https://github.com/sruj08/amrit)
 
 ---
 
