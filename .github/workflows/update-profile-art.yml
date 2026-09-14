@@ -37,4 +37,4 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: refresh contribution graph and profile art [skip ci]"
-          file_pattern: "data/contributions.json assets/logos/*.svg assets/victories/*.png ascii-*.svg tech-stack.svg contrib-heatmap.svg"
+          file_pattern: "data/contributions.json assets/logos/*.svg assets/victories/*.png ascii-*.svg victories-grid.svg tech-stack.svg contrib-heatmap.svg"

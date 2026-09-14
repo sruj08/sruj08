@@ -12,7 +12,7 @@
 
 <br><br>
 
-<img src="ascii-achievements.svg" width="100%" alt="sruj08 Major Victories" />
+<img src="victories-grid.svg" width="100%" alt="sruj08 Major Victories" />
 
 <br><br>
 

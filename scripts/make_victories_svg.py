@@ -56,7 +56,7 @@ def image_to_base64(filepath, target_size=(320, 230)):
         print(f"Failed to process {filepath}: {e}")
         return ""
 
-def generate_victories_svg(output_path="ascii-achievements.svg"):
+def generate_victories_svg(output_path="victories-grid.svg"):
     width = 1125
     height = 420
     
