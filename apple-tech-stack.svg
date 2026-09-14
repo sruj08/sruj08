@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 230" width="860" height="230">
+<style>
+  .outer-card { fill: #0d1117; rx: 16px; ry: 16px; stroke: #30363d; stroke-width: 1.2px; }
+  .section-title { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif; font-size: 15px; font-weight: 700; fill: #f0f6fc; }
+  .cat-title { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif; font-size: 12px; font-weight: 600; }
+  .pill-bg { rx: 10px; ry: 10px; fill: #161b22; stroke: #30363d; stroke-width: 1px; }
+  .pill-text { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", monospace; font-size: 11px; fill: #e6edf3; }
+</style>
+<rect width="860" height="230" class="outer-card" />
+<text x="24" y="32" class="section-title">💻 Technical Stack &amp; Engineering Skills</text>
+<text x="24" y="60" class="cat-title" fill="#2997ff">⚡ Languages & Core</text>
+<g>
+  <rect x="220" y="46" width="63.2" height="22" class="pill-bg" />
+  <text x="251.6" y="60" text-anchor="middle" class="pill-text">Golang</text>
+</g>
+<g>
+  <rect x="293.2" y="46" width="41.6" height="22" class="pill-bg" />
+  <text x="314.0" y="60" text-anchor="middle" class="pill-text">C++</text>
+</g>
+<g>
+  <rect x="344.8" y="46" width="27.2" height="22" class="pill-bg" />
+  <text x="358.40000000000003" y="60" text-anchor="middle" class="pill-text">C</text>
+</g>
+<g>
+  <rect x="382.0" y="46" width="48.8" height="22" class="pill-bg" />
+  <text x="406.4" y="60" text-anchor="middle" class="pill-text">Java</text>
+</g>
+<g>
+  <rect x="440.8" y="46" width="63.2" height="22" class="pill-bg" />
+  <text x="472.40000000000003" y="60" text-anchor="middle" class="pill-text">Python</text>
+</g>
+<g>
+  <rect x="514.0" y="46" width="77.6" height="22" class="pill-bg" />
+  <text x="552.8" y="60" text-anchor="middle" class="pill-text">Solidity</text>
+</g>
+<g>
+  <rect x="601.6" y="46" width="92.0" height="22" class="pill-bg" />
+  <text x="647.6" y="60" text-anchor="middle" class="pill-text">JavaScript</text>
+</g>
+<g>
+  <rect x="703.6" y="46" width="92.0" height="22" class="pill-bg" />
+  <text x="749.6" y="60" text-anchor="middle" class="pill-text">TypeScript</text>
+</g>
+<text x="24" y="103" class="cat-title" fill="#30d158">🚀 Backend & Systems</text>
+<g>
+  <rect x="220" y="89" width="135.2" height="22" class="pill-bg" />
+  <text x="287.6" y="103" text-anchor="middle" class="pill-text">Go Microservices</text>
+</g>
+<g>
+  <rect x="365.2" y="89" width="84.8" height="22" class="pill-bg" />
+  <text x="407.59999999999997" y="103" text-anchor="middle" class="pill-text">REST APIs</text>
+</g>
+<g>
+  <rect x="460.0" y="89" width="84.8" height="22" class="pill-bg" />
+  <text x="502.4" y="103" text-anchor="middle" class="pill-text">ExpressJS</text>
+</g>
+<g>
+  <rect x="554.8" y="89" width="77.6" height="22" class="pill-bg" />
+  <text x="593.5999999999999" y="103" text-anchor="middle" class="pill-text">Firebase</text>
+</g>
+<g>
+  <rect x="642.4" y="89" width="63.2" height="22" class="pill-bg" />
+  <text x="674.0" y="103" text-anchor="middle" class="pill-text">Docker</text>
+</g>
+<g>
+  <rect x="715.6" y="89" width="41.6" height="22" class="pill-bg" />
+  <text x="736.4" y="103" text-anchor="middle" class="pill-text">GCP</text>
+</g>
+<text x="24" y="146" class="cat-title" fill="#ffd60a">🧠 AI / ML & Vision</text>
+<g>
+  <rect x="220" y="132" width="48.8" height="22" class="pill-bg" />
+  <text x="244.4" y="146" text-anchor="middle" class="pill-text">LLMs</text>
+</g>
+<g>
+  <rect x="278.8" y="132" width="106.4" height="22" class="pill-bg" />
+  <text x="332.0" y="146" text-anchor="middle" class="pill-text">RAG Pipeline</text>
+</g>
+<g>
+  <rect x="395.20000000000005" y="132" width="84.8" height="22" class="pill-bg" />
+  <text x="437.6" y="146" text-anchor="middle" class="pill-text">LangChain</text>
+</g>
+<g>
+  <rect x="490.00000000000006" y="132" width="63.2" height="22" class="pill-bg" />
+  <text x="521.6" y="146" text-anchor="middle" class="pill-text">YOLOv8</text>
+</g>
+<g>
+  <rect x="563.2" y="132" width="63.2" height="22" class="pill-bg" />
+  <text x="594.8000000000001" y="146" text-anchor="middle" class="pill-text">OpenCV</text>
+</g>
+<g>
+  <rect x="636.4000000000001" y="132" width="41.6" height="22" class="pill-bg" />
+  <text x="657.2" y="146" text-anchor="middle" class="pill-text">CNN</text>
+</g>
+<text x="24" y="189" class="cat-title" fill="#bf5af2">🔗 Web3 & Blockchain</text>
+<g>
+  <rect x="220" y="175" width="77.6" height="22" class="pill-bg" />
+  <text x="258.8" y="189" text-anchor="middle" class="pill-text">Solidity</text>
+</g>
+<g>
+  <rect x="307.6" y="175" width="128.0" height="22" class="pill-bg" />
+  <text x="371.6" y="189" text-anchor="middle" class="pill-text">Smart Contracts</text>
+</g>
+<g>
+  <rect x="445.6" y="175" width="63.2" height="22" class="pill-bg" />
+  <text x="477.20000000000005" y="189" text-anchor="middle" class="pill-text">ERC-20</text>
+</g>
+<g>
+  <rect x="518.8000000000001" y="175" width="106.4" height="22" class="pill-bg" />
+  <text x="572.0000000000001" y="189" text-anchor="middle" class="pill-text">OpenZeppelin</text>
+</g>
+<g>
+  <rect x="635.2" y="175" width="77.6" height="22" class="pill-bg" />
+  <text x="674.0" y="189" text-anchor="middle" class="pill-text">MetaMask</text>
+</g>
+<g>
+  <rect x="722.8000000000001" y="175" width="70.4" height="22" class="pill-bg" />
+  <text x="758.0000000000001" y="189" text-anchor="middle" class="pill-text">Sepolia</text>
+</g>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 250" width="860" height="250">
+<defs>
+  <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#161b22" />
+    <stop offset="100%" stop-color="#0d1117" />
+  </linearGradient>
+</defs>
+<style>
+  .outer-card { fill: #0d1117; rx: 16px; ry: 16px; stroke: #30363d; stroke-width: 1.2px; }
+  .inner-card { fill: url(#cardBg); rx: 12px; ry: 12px; stroke: #30363d; stroke-width: 1px; }
+  .section-title { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif; font-size: 15px; font-weight: 700; fill: #f0f6fc; }
+  .item-title { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif; font-size: 13.5px; font-weight: 700; fill: #f0f6fc; }
+  .item-sub { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif; font-size: 11px; fill: #8b949e; }
+  .item-rank { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif; font-size: 12px; font-weight: 700; }
+  .item-detail { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif; font-size: 11px; fill: #8b949e; }
+</style>
+<rect width="860" height="250" class="outer-card" />
+<text x="24" y="32" class="section-title">🏆 Major Hackathon Victories &amp; Honors</text>
+<g>
+  <rect x="22" y="48" width="398" height="88" class="inner-card" />
+  <rect x="34" y="62" width="4" height="60" rx="2" fill="#ffd60a" />
+  <text x="46" y="76" class="item-title">Pune Agri Hackathon 2026</text>
+  <text x="404" y="76" text-anchor="end" class="item-rank" fill="#ffd60a">🏆 Runner-Up (INR 15 Lakhs)</text>
+  <text x="46" y="94" class="item-sub">Govt. of Maharashtra  •  <tspan fill="#e6edf3">2,000+ Teams Worldwide</tspan></text>
+  <text x="46" y="114" class="item-detail">✨ Felicitated by Chief Minister of Maharashtra</text>
+</g>
+<g>
+  <rect x="440" y="48" width="398" height="88" class="inner-card" />
+  <rect x="452" y="62" width="4" height="60" rx="2" fill="#30d158" />
+  <text x="464" y="76" class="item-title">TechFiesta '26 International</text>
+  <text x="822" y="76" text-anchor="end" class="item-rank" fill="#30d158">🥇 1st Rank (INR 3.5L+ Pool)</text>
+  <text x="464" y="94" class="item-sub">Global Agriculture Domain  •  <tspan fill="#e6edf3">700+ Teams Worldwide</tspan></text>
+  <text x="464" y="114" class="item-detail">✨ Executed full 24-hour architectural pivot</text>
+</g>
+<g>
+  <rect x="22" y="148" width="398" height="88" class="inner-card" />
+  <rect x="34" y="162" width="4" height="60" rx="2" fill="#2997ff" />
+  <text x="46" y="176" class="item-title">VOIS Innovation Marathon 2.0</text>
+  <text x="404" y="176" text-anchor="end" class="item-rank" fill="#2997ff">🥇 National Winner (INR 2 Lakhs)</text>
+  <text x="46" y="194" class="item-sub">Vodafone Intelligent Solutions  •  <tspan fill="#e6edf3">630+ Teams Nationwide</tspan></text>
+  <text x="46" y="214" class="item-detail">✨ Architected & deployed live production cloud system</text>
+</g>
+<g>
+  <rect x="440" y="148" width="398" height="88" class="inner-card" />
+  <rect x="452" y="162" width="4" height="60" rx="2" fill="#bf5af2" />
+  <text x="464" y="176" class="item-title">iQOO Hackathon 2026</text>
+  <text x="822" y="176" text-anchor="end" class="item-rank" fill="#bf5af2">🥉 2nd Runner-Up (INR 50K)</text>
+  <text x="464" y="194" class="item-sub">Phone-First Computing  •  <tspan fill="#e6edf3">6,500+ Registrations</tspan></text>
+  <text x="464" y="214" class="item-detail">✨ Built on-device spatial memory & offline tracker</text>
+</g>
+</svg>
