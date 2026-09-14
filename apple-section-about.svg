@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 42" width="860" height="42">
+<defs>
+  <linearGradient id="secGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#161b22" />
+    <stop offset="100%" stop-color="#0d1117" />
+  </linearGradient>
+</defs>
+<style>
+  .bg { fill: url(#secGrad); rx: 10px; ry: 10px; stroke: #30363d; stroke-width: 1px; }
+  .title { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif; font-size: 15px; font-weight: 700; fill: #f0f6fc; letter-spacing: -0.2px; }
+  .accent-bar { fill: #2997ff; rx: 2px; ry: 2px; }
+</style>
+<rect width="860" height="42" class="bg" />
+<rect x="14" y="11" width="4" height="20" class="accent-bar" />
+<text x="28" y="26" class="title">About Srujan Satav</text>
+</svg>

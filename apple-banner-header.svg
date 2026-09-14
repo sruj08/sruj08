@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 190" width="860" height="190">
+<defs>
+  <linearGradient id="bannerBg" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#161b22" />
+    <stop offset="100%" stop-color="#0d1117" />
+  </linearGradient>
+  <linearGradient id="topLine" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#2997ff" />
+    <stop offset="50%" stop-color="#a155b9" />
+    <stop offset="100%" stop-color="#30d158" />
+  </linearGradient>
+</defs>
+<style>
+  .card { fill: url(#bannerBg); rx: 16px; ry: 16px; stroke: #30363d; stroke-width: 1.2px; }
+  .name { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif; font-size: 36px; font-weight: 700; fill: #f0f6fc; letter-spacing: -0.6px; }
+  .subtitle { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif; font-size: 15px; font-weight: 500; fill: #2997ff; }
+  .desc { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif; font-size: 13.5px; fill: #8b949e; }
+  .badge-bg { rx: 10px; ry: 10px; fill: #21262d; stroke: #363b42; stroke-width: 1px; }
+  .badge-text { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", monospace; font-size: 11px; font-weight: 600; fill: #e6edf3; }
+</style>
+<rect width="860" height="190" class="card" />
+<path d="M 0 16 A 16 16 0 0 1 16 0 L 844 0 A 16 16 0 0 1 860 16 L 860 4 L 0 4 Z" fill="url(#topLine)" opacity="0.95" />
+<text x="36" y="56" class="name">Srujan Satav</text>
+<text x="36" y="82" class="subtitle">Co-Founder @ Novaryn Technologies  •  Partner @ MindstriX  •  PICT Pune '26</text>
+<text x="36" y="108" class="desc">Systems Architect &amp; Forward Deployed Engineer grounded in Go, AI/ML Pipelines &amp; Web3.</text>
+<g>
+  <rect x="36" y="132" width="202.0" height="26" class="badge-bg" />
+  <circle cx="47" cy="145" r="3.5" fill="#ffd60a" />
+  <text x="56" y="149" class="badge-text">🏆 Pune Agri 15L Runner-Up</text>
+</g>
+<g>
+  <rect x="248.0" y="132" width="209.20000000000002" height="26" class="badge-bg" />
+  <circle cx="259.0" cy="145" r="3.5" fill="#30d158" />
+  <text x="268.0" y="149" class="badge-text">🥇 TechFiesta '26 Global #1</text>
+</g>
+<g>
+  <rect x="467.20000000000005" y="132" width="209.20000000000002" height="26" class="badge-bg" />
+  <circle cx="478.20000000000005" cy="145" r="3.5" fill="#2997ff" />
+  <text x="487.20000000000005" y="149" class="badge-text">🥇 VOIS 2.0 National Winner</text>
+</g>
+<g>
+  <rect x="686.4000000000001" y="132" width="223.6" height="26" class="badge-bg" />
+  <circle cx="697.4000000000001" cy="145" r="3.5" fill="#bf5af2" />
+  <text x="706.4000000000001" y="149" class="badge-text">🎓 PICT Pune ENTC (CGPA 8.38)</text>
+</g>
+</svg>
