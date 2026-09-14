@@ -4,13 +4,14 @@ from io import BytesIO
 from PIL import Image, ImageOps
 import xml.etree.ElementTree as ET
 
-BG_COLOR = "#050505" # Tactical Obsidian
-BORDER_COLOR = "#1f1f1f" # Hairline Divider
+BG_COLOR = "#040404" # Industrial Black
+BORDER_COLOR = "#1a1a1a" # Hairline Divider
+GRID_COLOR = "#0f0f0f" # CAD Blueprint Grid
 ACCENT_GREEN = "#00C853" # Matrix Neon Green
-ACCENT_ORANGE = "#FF6B00" # Industrial Orange
-TEXT_COLOR = "#f4f5f7" # Signature Off-White
-MUTED_TEXT = "#7d8a9e" # Muted Slate-Gray
-IMAGE_BORDER = "#1f1f1f" # Active Highlight
+ACCENT_ORANGE = "#FFB000" # Bloomberg Amber
+TEXT_COLOR = "#e0e0e0" # Terminal Off-White
+MUTED_TEXT = "#666666" # Subdued Data Gray
+IMAGE_BORDER = "#222222" # Sharp Data Border
 
 FILES = [
     "assets/victories/pune_agri.png",
@@ -77,11 +78,11 @@ def generate_victories_svg(output_path="victories-grid.svg"):
     
     # Fonts & Styles
     svg.append('  <style>')
-    svg.append('    .header-text { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 14px; font-weight: bold; fill: #FF6B00; }')
-    svg.append('    .title-text { font-family: "SF Pro Display", "-apple-system", sans-serif; font-size: 13px; font-weight: 800; fill: #f4f5f7; letter-spacing: 0.5px; }')
+    svg.append('    .header-text { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 14px; font-weight: bold; fill: #FFB000; }')
+    svg.append('    .title-text { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 13px; font-weight: bold; fill: #e0e0e0; letter-spacing: 0px; text-transform: uppercase; }')
     svg.append('    .rank-text { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 11px; font-weight: bold; fill: #00C853; }')
-    svg.append('    .prize-text { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 11px; fill: #7d8a9e; }')
-    svg.append('    .meta-text { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 10px; fill: #7d8a9e; letter-spacing: 1px; }')
+    svg.append('    .prize-text { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 11px; fill: #666666; }')
+    svg.append('    .meta-text { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 10px; fill: #666666; letter-spacing: 1px; text-transform: uppercase; }')
     svg.append('  </style>')
     
     svg.append('  <defs>')
@@ -91,18 +92,28 @@ def generate_victories_svg(output_path="victories-grid.svg"):
     svg.append('    </filter>')
     for i in range(4):
         x = start_x + i * (img_w + gap)
-        svg.append(f'    <clipPath id="clip-{i}"><rect x="{x}" y="140" width="{img_w}" height="{img_h}" rx="2" ry="2" /></clipPath>')
+        svg.append(f'    <clipPath id="clip-{i}"><rect x="{x}" y="140" width="{img_w}" height="{img_h}" rx="0" ry="0" /></clipPath>')
     svg.append('  </defs>')
     
     # Outer Background Box & Noise Texture
-    svg.append(f'  <rect x="0.5" y="0.5" width="{width - 1}" height="{height - 1}" rx="8" fill="{BG_COLOR}" stroke="{BORDER_COLOR}"/>')
-    svg.append(f'  <rect x="0.5" y="0.5" width="{width - 1}" height="{height - 1}" rx="8" fill="transparent" filter="url(#noise)" style="pointer-events: none;" />')
+    svg.append(f'  <rect x="0" y="0" width="{width}" height="{height}" rx="0" fill="{BG_COLOR}" />')
+    
+    # Render CAD Grid
+    svg.append(f'  <g stroke="{GRID_COLOR}" stroke-width="1">')
+    for y in range(0, height, 20):
+        svg.append(f'    <line x1="0" y1="{y}" x2="{width}" y2="{y}" />')
+    for x in range(0, width, 20):
+        svg.append(f'    <line x1="{x}" y1="0" x2="{x}" y2="{height}" />')
+    svg.append('  </g>')
+    
+    svg.append(f'  <rect x="0" y="0" width="{width}" height="{height}" fill="transparent" filter="url(#noise)" style="pointer-events: none;" />')
+    svg.append(f'  <rect x="0.5" y="0.5" width="{width - 1}" height="{height - 1}" fill="none" stroke="{BORDER_COLOR}" />')
     
     # Header Line (matching ASCII aesthetic)
     svg.append(f'  <text x="28" y="38" class="header-text">--- sruj08@victories ----------------------------------------------------------------───────────</text>')
     
     # Hero Headline
-    svg.append(f'  <text x="34" y="75" font-size="28" font-family="-apple-system, BlinkMacSystemFont, \'Inter\', sans-serif" font-weight="800" fill="#ffffff" letter-spacing="-0.5">BUILT UNDER PRESSURE. PROVEN IN PUBLIC.</text>')
+    svg.append(f'  <text x="34" y="75" font-size="28" font-family="SF Mono, Consolas, Courier New, monospace" font-weight="bold" fill="#e0e0e0" letter-spacing="1">BUILT UNDER PRESSURE. PROVEN IN PUBLIC.</text>')
     svg.append(f'  <text x="34" y="98" class="meta-text" fill="{MUTED_TEXT}">GOVT. OF MAHARASHTRA · GLOBAL / NATIONAL SCALE · 6,500+ REGISTRATIONS</text>')
     
     # Architectural Grid System & Crosshairs
@@ -112,7 +123,7 @@ def generate_victories_svg(output_path="victories-grid.svg"):
         if i == 0: cx = 0
         if i == 4: cx = width
         # Vertical lines (subtle grid)
-        # svg.append(f'    <line x1="{cx}" y1="0" x2="{cx}" y2="{height}" stroke-dasharray="4 4" stroke-opacity="0.5"/>')
+        svg.append(f'    <line x1="{cx}" y1="0" x2="{cx}" y2="{height}" stroke-dasharray="2 2" stroke-opacity="0.8"/>')
     svg.append('  </g>')
     
     meta_tags = ["[ 01 // AGR ]", "[ 02 // TCF ]", "[ 03 // VIS ]", "[ 04 // IQO ]"]
@@ -131,7 +142,7 @@ def generate_victories_svg(output_path="victories-grid.svg"):
             svg.append(f'  <image href="{b64}" x="{x}" y="{y}" width="{img_w}" height="{img_h}" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-{i})" />')
         
         # Image Border (Sharp corners)
-        svg.append(f'  <rect x="{x}" y="{y}" width="{img_w}" height="{img_h}" rx="2" ry="2" fill="none" stroke="{IMAGE_BORDER}" stroke-width="1" />')
+        svg.append(f'  <rect x="{x}" y="{y}" width="{img_w}" height="{img_h}" rx="0" ry="0" fill="none" stroke="{IMAGE_BORDER}" stroke-width="1" />')
         
         # Transition Divider (Hairline + Accent Tick)
         svg.append(f'  <line x1="{x}" y1="{y + img_h + 20}" x2="{x + img_w}" y2="{y + img_h + 20}" stroke="{IMAGE_BORDER}" stroke-width="1" />')

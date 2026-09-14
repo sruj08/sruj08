@@ -18,10 +18,10 @@
 
 <!-- SOCIAL LINKS (FRICTIONLESS CONTACT) -->
 <p align="center">
-  <a href="https://linkedin.com/in/satavsrujan"><img src="icons/linkedin.svg" width="16" alt="LinkedIn" /> <code>[ LINKEDIN ]</code></a> &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="mailto:satavsrujan@gmail.com"><img src="icons/gmail.svg" width="16" alt="Email" /> <code>[ EMAIL ]</code></a> &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="https://leetcode.com/sruj08"><img src="icons/leetcode.svg" width="16" alt="LeetCode" /> <code>[ LEETCODE ]</code></a> &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="https://github.com/sruj08"><img src="icons/github.svg" width="16" alt="GitHub" /> <code>[ GITHUB ]</code></a>
+  <a href="https://linkedin.com/in/satavsrujan"><img src="icons/linkedin.svg" width="16" alt="LinkedIn" align="center" /> [ LINKEDIN ]</a> &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="mailto:satavsrujan@gmail.com"><img src="icons/gmail.svg" width="16" alt="Email" align="center" /> [ EMAIL ]</a> &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://leetcode.com/sruj08"><img src="icons/leetcode.svg" width="16" alt="LeetCode" align="center" /> [ LEETCODE ]</a> &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://github.com/sruj08"><img src="icons/github.svg" width="16" alt="GitHub" align="center" /> [ GITHUB ]</a>
 </p>
 
 ---
@@ -57,15 +57,15 @@
 
 *   **Engineering Feat**: Designed an offline-first speech compression loop reducing payload sizes by 78% for 2G networks, alongside a deterministic risk engine for 3-5 day disease forecasting.
 *   **Stack**: `PyTorch` · `YOLOv8` · `LangChain` · `Flask` · `React`
-*   <img src="https://cdn.simpleicons.org/github/00C853" width="14" alt="GitHub" /> [sruj08/KrishiSahAI](https://github.com/sruj08/KrishiSahAI)
+*   <img src="icons/github.svg" width="14" alt="GitHub" align="center" /> [sruj08/KrishiSahAI](https://github.com/sruj08/KrishiSahAI)
 <br>
 
-#### **02. AEGIS (CHANAKYA)** | *Sovereign Regulatory Operating System (RegOS)*
+#### **02. CHANAKYA** | *Sovereign Regulatory Operating System (RegOS)*
 > Cryptographically-secured invariant core built for SEBI to decompose macroeconomic policies, map semantic blast radii, and execute compliance via Open Policy Agent.
 
 *   **Engineering Feat**: Engineered a bi-temporal SQLite engine with Ed25519 signed obligations and recursive graph queries to ensure tamper-proof, "as-of" regulatory auditing.
 *   **Stack**: `Go` · `SQLite` · `OPA/Rego` · `Claude-3.5-Sonnet` · `Next.js 16`
-*   <img src="icons/github.svg" width="14" alt="GitHub" /> [mridulbansal4/Chanakya](https://github.com/mridulbansal4/Chanakya)
+*   <img src="icons/github.svg" width="14" alt="GitHub" align="center" /> [mridulbansal4/Chanakya](https://github.com/mridulbansal4/Chanakya)
 <br>
 
 #### **03. AMRIT** | *Advanced Mission Resource Intelligence Tool (ISRO)*
@@ -73,7 +73,7 @@
 
 *   **Engineering Feat**: Built a physics-informed thermodynamic filter collapsing radar false-positives from 34.2% to 1.9%, paired with a 50,000-sample Monte Carlo resource inversion engine.
 *   **Stack**: `Python` · `NumPy/SciPy` · `React 18` · `TypeScript`
-*   <img src="https://cdn.simpleicons.org/github/00C853" width="14" alt="GitHub" /> [sruj08/amrit](https://github.com/sruj08/amrit)
+*   <img src="icons/github.svg" width="14" alt="GitHub" align="center" /> [sruj08/amrit](https://github.com/sruj08/amrit)
 
 ---
 

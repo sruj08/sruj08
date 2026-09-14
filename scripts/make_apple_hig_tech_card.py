@@ -1,12 +1,13 @@
 import os
 import xml.etree.ElementTree as ET
 
-BG_COLOR = "#050505" # Tactical Obsidian
-BORDER_COLOR = "#1f1f1f" # Hairline Divider
+BG_COLOR = "#040404" # Industrial Black
+BORDER_COLOR = "#1a1a1a" # Hairline Divider
+GRID_COLOR = "#0f0f0f" # CAD Blueprint Grid
 CARD_BG = "transparent" # No bulky cards
-HEADER_COLOR = "#FF6B00" # Tactical Orange
-TEXT_COLOR = "#f4f5f7" # Signature Off-White
-MUTED_TEXT = "#7d8a9e" # Muted Slate-Gray
+HEADER_COLOR = "#FFB000" # Bloomberg Amber
+TEXT_COLOR = "#e0e0e0" # Terminal Off-White
+MUTED_TEXT = "#666666" # Subdued Data Gray
 ICON_BG = "transparent" # No bubbly icons
 
 BRAND_COLORS = {
@@ -48,9 +49,9 @@ def generate_apple_hig_tech_card(output_path="tech-stack.svg"):
     svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-label="Official Tech Stack">')
     
     svg.append('  <style>')
-    svg.append('    .header-title { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 14px; font-weight: bold; fill: #FF6B00; }')
-    svg.append('    .tech-title { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 13px; font-weight: bold; fill: #f4f5f7; }')
-    svg.append('    .tech-subtitle { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 11px; fill: #7d8a9e; }')
+    svg.append('    .header-title { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 14px; font-weight: bold; fill: #FFB000; }')
+    svg.append('    .tech-title { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 13px; font-weight: bold; fill: #e0e0e0; text-transform: uppercase; }')
+    svg.append('    .tech-subtitle { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 11px; fill: #666666; text-transform: uppercase; }')
     svg.append('  </style>')
     
     svg.append('  <defs>')
@@ -61,8 +62,18 @@ def generate_apple_hig_tech_card(output_path="tech-stack.svg"):
     svg.append('  </defs>')
     
     # Outer Background Box & Noise Texture
-    svg.append(f'  <rect x="0.5" y="0.5" width="{width - 1}" height="{height - 1}" rx="8" fill="{BG_COLOR}" stroke="{BORDER_COLOR}"/>')
-    svg.append(f'  <rect x="0.5" y="0.5" width="{width - 1}" height="{height - 1}" rx="8" fill="transparent" filter="url(#noise)" style="pointer-events: none;" />')
+    svg.append(f'  <rect x="0" y="0" width="{width}" height="{height}" rx="0" fill="{BG_COLOR}" />')
+    
+    # Render CAD Grid
+    svg.append(f'  <g stroke="{GRID_COLOR}" stroke-width="1">')
+    for y in range(0, height, 20):
+        svg.append(f'    <line x1="0" y1="{y}" x2="{width}" y2="{y}" />')
+    for x in range(0, width, 20):
+        svg.append(f'    <line x1="{x}" y1="0" x2="{x}" y2="{height}" />')
+    svg.append('  </g>')
+    
+    svg.append(f'  <rect x="0" y="0" width="{width}" height="{height}" fill="transparent" filter="url(#noise)" style="pointer-events: none;" />')
+    svg.append(f'  <rect x="0.5" y="0.5" width="{width - 1}" height="{height - 1}" fill="none" stroke="{BORDER_COLOR}" />')
     
     # Header Line
     svg.append(f'  <text x="28" y="38" class="header-title">--- sruj08@core-skills ----------------------------------------------------------------───────────</text>')

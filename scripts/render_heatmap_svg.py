@@ -2,7 +2,7 @@ import os
 import json
 from datetime import datetime
 
-PALETTE = ["#050505", "#003b14", "#006d25", "#00a238", "#00c853", "#39ff84"]
+PALETTE = ["#040404", "#003b14", "#006d25", "#00a238", "#00c853", "#39ff84"]
 
 def render_heatmap_svg(data_path="data/contributions.json", output_svg="contrib-heatmap.svg"):
     if not os.path.exists(data_path):
@@ -30,12 +30,12 @@ def render_heatmap_svg(data_path="data/contributions.json", output_svg="contrib-
     svg = []
     svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {svg_width} {svg_height}" width="{svg_width}" height="{svg_height}">')
     svg.append('<style>')
-    svg.append('  .bg { fill: #050505; rx: 8px; ry: 8px; stroke: #1f1f1f; stroke-width: 1px; }')
-    svg.append('  .title { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 14px; font-weight: bold; fill: #FF6B00; }')
+    svg.append('  .bg { fill: #040404; rx: 0px; ry: 0px; stroke: #1a1a1a; stroke-width: 1px; }')
+    svg.append('  .title { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 14px; font-weight: bold; fill: #FFB000; }')
     svg.append('  .day-rect { rx: 0px; ry: 0px; opacity: 1; }')
-    svg.append('  .label { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 10px; fill: #7d8590; }')
-    svg.append('  .stats { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 11px; font-weight: bold; fill: #00c853; }')
-    svg.append('  .legend-text { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 10px; fill: #7d8590; }')
+    svg.append('  .label { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 10px; fill: #666666; text-transform: uppercase; }')
+    svg.append('  .stats { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 11px; font-weight: bold; fill: #00c853; text-transform: uppercase; }')
+    svg.append('  .legend-text { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 10px; fill: #666666; text-transform: uppercase; }')
     svg.append('</style>')
     
     svg.append('  <defs>')
@@ -47,7 +47,16 @@ def render_heatmap_svg(data_path="data/contributions.json", output_svg="contrib-
     
     # Outer terminal box & Noise Texture
     svg.append(f'<rect width="{svg_width}" height="{svg_height}" class="bg" />')
-    svg.append(f'<rect width="{svg_width}" height="{svg_height}" fill="transparent" filter="url(#noise)" style="pointer-events: none;" rx="8" ry="8" />')
+    
+    # Render CAD Grid
+    svg.append(f'  <g stroke="#0f0f0f" stroke-width="1">')
+    for y in range(0, svg_height, 20):
+        svg.append(f'    <line x1="0" y1="{y}" x2="{svg_width}" y2="{y}" />')
+    for x in range(0, svg_width, 20):
+        svg.append(f'    <line x1="{x}" y1="0" x2="{x}" y2="{svg_height}" />')
+    svg.append('  </g>')
+    
+    svg.append(f'<rect width="{svg_width}" height="{svg_height}" fill="transparent" filter="url(#noise)" style="pointer-events: none;" rx="0" ry="0" />')
     
     # Header Line
     svg.append(f'<text x="28" y="38" class="title">--- sruj08@contributions -----------------------------------------------------------───────────</text>')
@@ -79,7 +88,7 @@ def render_heatmap_svg(data_path="data/contributions.json", output_svg="contrib-
     svg.append(f'<text x="{legend_x - 32}" y="{footer_y}" class="legend-text">Less</text>')
     for idx, col in enumerate(PALETTE):
         lx = legend_x + idx * (box_size + 3)
-        svg.append(f'<rect x="{lx}" y="{footer_y - 9}" width="{box_size}" height="{box_size}" rx="2" fill="{col}" />')
+        svg.append(f'<rect x="{lx}" y="{footer_y - 9}" width="{box_size}" height="{box_size}" rx="0" fill="{col}" />')
     svg.append(f'<text x="{legend_x + len(PALETTE) * (box_size + 3) + 6}" y="{footer_y}" class="legend-text">More</text>')
     
     svg.append('</svg>')
