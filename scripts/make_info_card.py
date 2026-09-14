@@ -4,8 +4,6 @@ def generate_info_card(output_path="info-card.svg", static_mode=False):
     svg_width = 490
     svg_height = 490
     
-    is_static = static_mode or os.environ.get("STATIC") == "1"
-    
     card_data = [
         ("USER", "Srujan Satav (sruj08)", "#58a6ff"),
         ("ROLES", "Co-Founder @ Novaryn | Partner @ MindstriX", "#79c0ff"),
@@ -27,31 +25,19 @@ def generate_info_card(output_path="info-card.svg", static_mode=False):
     svg.append('    <stop offset="50%" stop-color="#bc8cff" stop-opacity="0.5" />')
     svg.append('    <stop offset="100%" stop-color="#39d353" stop-opacity="0.8" />')
     svg.append('  </linearGradient>')
-    svg.append('  <filter id="shadow3d" x="-10%" y="-10%" width="120%" height="120%">')
-    svg.append('    <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.6" />')
-    svg.append('  </filter>')
     svg.append('</defs>')
     
     svg.append('<style>')
-    svg.append('  @keyframes fadeIn {')
-    svg.append('    from { opacity: 0; transform: translateY(8px); }')
-    svg.append('    to { opacity: 1; transform: translateY(0); }')
-    svg.append('  }')
-    svg.append('  .card-bg { fill: #0d1117; rx: 10px; ry: 10px; stroke: url(#cardBorder); stroke-width: 1.5px; filter: url(#shadow3d); }')
+    svg.append('  .card-bg { fill: #0d1117; rx: 10px; ry: 10px; stroke: url(#cardBorder); stroke-width: 1.5px; }')
     svg.append('  .header-bg { fill: #161b22; rx: 10px; ry: 10px; }')
-    svg.append('  .title { font-family: monospace; font-size: 11px; font-weight: bold; fill: #8b949e; }')
-    svg.append('  .key { font-family: "Fira Code", monospace; font-size: 11.5px; font-weight: bold; fill: #8b949e; }')
-    svg.append('  .val { font-family: "Fira Code", monospace; font-size: 11.5px; }')
-    svg.append('  .prompt-line { font-family: monospace; font-size: 12.5px; font-weight: bold; fill: #39d353; }')
-    
-    if not is_static:
-        svg.append('  .anim-line { opacity: 0; animation: fadeIn 0.4s ease-out forwards; }')
-    else:
-        svg.append('  .anim-line { opacity: 1; }')
-        
+    svg.append('  .title { font-family: monospace, Courier; font-size: 11px; font-weight: bold; fill: #8b949e; }')
+    svg.append('  .key { font-family: monospace, Courier; font-size: 11.5px; font-weight: bold; fill: #8b949e; }')
+    svg.append('  .val { font-family: monospace, Courier; font-size: 11.5px; }')
+    svg.append('  .prompt-line { font-family: monospace, Courier; font-size: 12.5px; font-weight: bold; fill: #39d353; }')
+    svg.append('  .anim-line { opacity: 1; }')
     svg.append('</style>')
     
-    # Outer terminal box with 3D border and shadow
+    # Outer terminal box
     svg.append(f'<rect width="{svg_width - 4}" height="{svg_height - 4}" x="2" y="2" class="card-bg" />')
     
     # Title bar
@@ -65,8 +51,8 @@ def generate_info_card(output_path="info-card.svg", static_mode=False):
     start_y = 54
     line_spacing = 32
     
-    delay = 0.1
-    svg.append(f'<g class="anim-line" style="animation-delay: {delay:.2f}s;">')
+    delay = 0.05
+    svg.append(f'<g class="anim-line">')
     svg.append(f'  <text x="20" y="{start_y}" class="prompt-line">sruj08@pict-pune:~$ <tspan fill="#e6edf3">neofetch</tspan></text>')
     svg.append(f'  <line x1="20" y1="{start_y + 10}" x2="{svg_width - 20}" y2="{start_y + 10}" stroke="#30363d" stroke-width="1" />')
     svg.append('</g>')
@@ -74,20 +60,21 @@ def generate_info_card(output_path="info-card.svg", static_mode=False):
     # Render key-value pairs
     for i, (key, val, color) in enumerate(card_data):
         y_pos = start_y + 36 + i * line_spacing
-        delay += 0.12
+        delay += 0.1
         
-        svg.append(f'<g class="anim-line" style="animation-delay: {delay:.2f}s;">')
+        svg.append(f'<g class="anim-line">')
         svg.append(f'  <text x="22" y="{y_pos}" class="key">{key.lower()}</text>')
         svg.append(f'  <text x="110" y="{y_pos}" class="key" fill="#8b949e">-&gt;</text>')
         svg.append(f'  <text x="132" y="{y_pos}" class="val" fill="{color}">{val}</text>')
+        if not static_mode:
+            svg.append(f'  <animate attributeName="opacity" from="0" to="1" begin="{delay:.2f}s" dur="0.3s" fill="freeze" />')
         svg.append('</g>')
         
     # Terminal palette blocks at the bottom
     palette_y = start_y + 36 + len(card_data) * line_spacing + 10
     colors = ["#161b22", "#ff5f56", "#27c93f", "#ffbd2e", "#58a6ff", "#bc8cff", "#39d353", "#e6edf3"]
     
-    delay += 0.15
-    svg.append(f'<g class="anim-line" style="animation-delay: {delay:.2f}s;">')
+    svg.append(f'<g class="anim-line">')
     svg.append(f'  <line x1="20" y1="{palette_y - 12}" x2="{svg_width - 20}" y2="{palette_y - 12}" stroke="#30363d" stroke-width="1" />')
     for idx, c in enumerate(colors):
         x_pos = 22 + idx * 26

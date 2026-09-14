@@ -1,16 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 250" width="860" height="250">
-<defs>
-  <filter id="pillShadow" x="-10%" y="-10%" width="120%" height="120%">
-    <feDropShadow dx="0" dy="3" stdDeviation="2" flood-color="#000000" flood-opacity="0.5" />
-  </filter>
-</defs>
 <style>
   .bg { fill: #0d1117; rx: 10px; ry: 10px; stroke: #30363d; stroke-width: 1px; }
   .title-bar { fill: #161b22; rx: 10px; ry: 10px; }
-  .header-title { font-family: monospace; font-size: 11px; font-weight: bold; fill: #8b949e; }
-  .cat-title { font-family: "Fira Code", monospace; font-size: 12px; font-weight: bold; }
-  .pill-bg { rx: 12px; ry: 12px; fill: #161b22; stroke: #30363d; stroke-width: 1px; filter: url(#pillShadow); transition: all 0.2s; }
-  .pill-text { font-family: "Fira Code", monospace; font-size: 11px; fill: #c9d1d9; }
+  .header-title { font-family: monospace, Courier; font-size: 11px; font-weight: bold; fill: #8b949e; }
+  .cat-title { font-family: monospace, Courier; font-size: 12px; font-weight: bold; }
+  .pill-bg { rx: 12px; ry: 12px; fill: #161b22; stroke: #30363d; stroke-width: 1px; }
+  .pill-text { font-family: monospace, Courier; font-size: 11px; fill: #c9d1d9; }
 </style>
 <rect width="860" height="250" class="bg" />
 <path d="M 0 8 A 8 8 0 0 1 8 0 L 852 0 A 8 8 0 0 1 860 8 L 860 28 L 0 28 Z" class="title-bar" stroke="#30363d" stroke-width="1" />
@@ -51,7 +46,7 @@
   <rect x="715.0" y="46" width="95.0" height="22" class="pill-bg" />
   <text x="762.5" y="60" text-anchor="middle" class="pill-text">TypeScript</text>
 </g>
-<text x="20" y="108" class="cat-title" fill="#38d430">🚀 Backend, Cloud & Architecture</text>
+<text x="20" y="108" class="cat-title" fill="#38d430">🚀 Backend & Cloud Systems</text>
 <g class="pill-group">
   <rect x="220" y="94" width="140.0" height="22" class="pill-bg" />
   <text x="290.0" y="108" text-anchor="middle" class="pill-text">Go Microservices</text>
@@ -76,7 +71,7 @@
   <rect x="730.0" y="94" width="42.5" height="22" class="pill-bg" />
   <text x="751.25" y="108" text-anchor="middle" class="pill-text">GCP</text>
 </g>
-<text x="20" y="156" class="cat-title" fill="#e3b341">🧠 AI / ML, Computer Vision & RAG</text>
+<text x="20" y="156" class="cat-title" fill="#e3b341">🧠 AI / ML, Vision & RAG</text>
 <g class="pill-group">
   <rect x="220" y="142" width="50.0" height="22" class="pill-bg" />
   <text x="245.0" y="156" text-anchor="middle" class="pill-text">LLMs</text>
@@ -101,7 +96,7 @@
   <rect x="647.5" y="142" width="42.5" height="22" class="pill-bg" />
   <text x="668.75" y="156" text-anchor="middle" class="pill-text">CNN</text>
 </g>
-<text x="20" y="204" class="cat-title" fill="#d2a8ff">🔗 Web3 & Blockchain Development</text>
+<text x="20" y="204" class="cat-title" fill="#d2a8ff">🔗 Web3 & Blockchain</text>
 <g class="pill-group">
   <rect x="220" y="190" width="80.0" height="22" class="pill-bg" />
   <text x="260.0" y="204" text-anchor="middle" class="pill-text">Solidity</text>

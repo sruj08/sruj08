@@ -1,47 +1,43 @@
-<div align="center">
+# Srujan Satav (`sruj08`)
+
+<p align="center">
+  <b>Co-Founder @ Novaryn Technologies | Partner @ MindstriX | PICT Pune ENTC</b>
+</p>
+
+---
 
 ### <code>sruj08@github ~ $ neofetch</code>
 
-<table border="0" cellpadding="0" cellspacing="0">
-  <tr>
-    <td valign="top" align="center">
-      <img src="./sruj08-ascii.svg" width="370" alt="Srujan Satav ASCII Portrait" />
-    </td>
-    <td valign="top" align="center">
-      <img src="./info-card.svg" width="490" alt="Neofetch System Info Card" />
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/sruj08/sruj08/main/sruj08-ascii.svg" width="370" alt="Srujan Satav ASCII Portrait" />
+  <img src="https://raw.githubusercontent.com/sruj08/sruj08/main/info-card.svg" width="480" alt="Neofetch System Info Card" />
+</p>
 
-<br><br>
+<br>
 
 ### <code>sruj08@github ~ $ ./showcase_hackathons.sh</code>
 
-<a href="https://github.com/sruj08">
-  <img src="./hackathon-3d-trophies.svg" width="860" alt="Srujan Satav 3D Hackathon Trophies" />
-</a>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/sruj08/sruj08/main/hackathon-3d-trophies.svg" width="860" alt="Srujan Satav 3D Hackathon Trophies" />
+</p>
 
-<br><br>
+<br>
 
 ### <code>sruj08@github ~ $ ./tech_stack.sh</code>
 
-<a href="https://github.com/sruj08">
-  <img src="./tech-stack-3d.svg" width="860" alt="Srujan Satav 3D Tech Stack Grid" />
-</a>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/sruj08/sruj08/main/tech-stack-3d.svg" width="860" alt="Srujan Satav 3D Tech Stack Grid" />
+</p>
 
-<br><br>
+<br>
 
 ### <code>sruj08@github ~ $ ./contributions.sh</code>
 
-<a href="https://github.com/sruj08">
-  <img src="./contrib-heatmap.svg" width="860" alt="Srujan Satav Contribution Heatmap" />
-</a>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/sruj08/sruj08/main/contrib-heatmap.svg" width="860" alt="Srujan Satav Contribution Heatmap" />
+</p>
 
-<br><br>
-
-```sys
-System Status: 🟢 All services operational | Novaryn Tech & MindstriX | PICT Pune ENTC
-```
+<br>
 
 ---
 
@@ -51,5 +47,3 @@ System Status: 🟢 All services operational | Novaryn Tech & MindstriX | PICT P
   <a href="https://x.com/SatavSruja549">X (Twitter)</a> •
   <a href="mailto:satavsrujan@gmail.com">Email</a>
 </p>
-
-</div>

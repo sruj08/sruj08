@@ -30,17 +30,13 @@ def render_heatmap_svg(data_path="data/contributions.json", output_svg="contrib-
     svg = []
     svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {svg_width} {svg_height}" width="{svg_width}" height="{svg_height}">')
     svg.append('<style>')
-    svg.append('  @keyframes diagSlide {')
-    svg.append('    from { opacity: 0; transform: translate(-4px, -6px) scale(0.85); }')
-    svg.append('    to { opacity: 1; transform: translate(0, 0) scale(1); }')
-    svg.append('  }')
     svg.append('  .bg { fill: #0d1117; rx: 8px; ry: 8px; stroke: #30363d; stroke-width: 1px; }')
     svg.append('  .title-bar { fill: #161b22; rx: 8px; ry: 8px; }')
-    svg.append('  .title { font-family: monospace; font-size: 11px; font-weight: bold; fill: #8b949e; }')
-    svg.append('  .day-rect { rx: 2px; ry: 2px; transform-origin: center; opacity: 0; animation: diagSlide 0.35s ease-out forwards; }')
-    svg.append('  .label { font-family: "Fira Code", monospace; font-size: 10px; fill: #7d8590; }')
-    svg.append('  .stats { font-family: "Fira Code", monospace; font-size: 11px; font-weight: bold; fill: #39d353; }')
-    svg.append('  .legend-text { font-family: monospace; font-size: 10px; fill: #7d8590; }')
+    svg.append('  .title { font-family: monospace, Courier; font-size: 11px; font-weight: bold; fill: #8b949e; }')
+    svg.append('  .day-rect { rx: 2px; ry: 2px; opacity: 1; }')
+    svg.append('  .label { font-family: monospace, Courier; font-size: 10px; fill: #7d8590; }')
+    svg.append('  .stats { font-family: monospace, Courier; font-size: 11px; font-weight: bold; fill: #39d353; }')
+    svg.append('  .legend-text { font-family: monospace, Courier; font-size: 10px; fill: #7d8590; }')
     svg.append('</style>')
     
     # Outer terminal box
@@ -53,10 +49,6 @@ def render_heatmap_svg(data_path="data/contributions.json", output_svg="contrib-
     svg.append('<circle cx="39" cy="14" r="4" fill="#27c93f" />')
     svg.append(f'<text x="{svg_width/2}" y="18" text-anchor="middle" class="title">sruj08@github ~ $ ./contributions.sh</text>')
     
-    # Month labels along top
-    months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-    # Render week blocks
-    # Organize days into 53 weeks x 7 days
     weeks = [[] for _ in range(53)]
     for idx, d in enumerate(days):
         week_idx = min(idx // 7, 52)
@@ -70,10 +62,7 @@ def render_heatmap_svg(data_path="data/contributions.json", output_svg="contrib-
             level = min(max(level, 0), len(PALETTE) - 1)
             fill_color = PALETTE[level]
             
-            # Diagonal animation delay
-            delay = (w_idx + d_idx) * 0.012
-            
-            svg.append(f'<rect x="{x_pos}" y="{y_pos}" width="{box_size}" height="{box_size}" fill="{fill_color}" class="day-rect" style="animation-delay: {delay:.3f}s;">')
+            svg.append(f'<rect x="{x_pos}" y="{y_pos}" width="{box_size}" height="{box_size}" fill="{fill_color}" class="day-rect">')
             svg.append(f'  <title>{day_data.get("count", 0)} contributions on {day_data.get("date", "")}</title>')
             svg.append('</rect>')
             

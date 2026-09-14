@@ -5,22 +5,15 @@
     <stop offset="50%" stop-color="#bc8cff" stop-opacity="0.5" />
     <stop offset="100%" stop-color="#39d353" stop-opacity="0.8" />
   </linearGradient>
-  <filter id="shadow3d" x="-10%" y="-10%" width="120%" height="120%">
-    <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.6" />
-  </filter>
 </defs>
 <style>
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(8px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  .card-bg { fill: #0d1117; rx: 10px; ry: 10px; stroke: url(#cardBorder); stroke-width: 1.5px; filter: url(#shadow3d); }
+  .card-bg { fill: #0d1117; rx: 10px; ry: 10px; stroke: url(#cardBorder); stroke-width: 1.5px; }
   .header-bg { fill: #161b22; rx: 10px; ry: 10px; }
-  .title { font-family: monospace; font-size: 11px; font-weight: bold; fill: #8b949e; }
-  .key { font-family: "Fira Code", monospace; font-size: 11.5px; font-weight: bold; fill: #8b949e; }
-  .val { font-family: "Fira Code", monospace; font-size: 11.5px; }
-  .prompt-line { font-family: monospace; font-size: 12.5px; font-weight: bold; fill: #39d353; }
-  .anim-line { opacity: 0; animation: fadeIn 0.4s ease-out forwards; }
+  .title { font-family: monospace, Courier; font-size: 11px; font-weight: bold; fill: #8b949e; }
+  .key { font-family: monospace, Courier; font-size: 11.5px; font-weight: bold; fill: #8b949e; }
+  .val { font-family: monospace, Courier; font-size: 11.5px; }
+  .prompt-line { font-family: monospace, Courier; font-size: 12.5px; font-weight: bold; fill: #39d353; }
+  .anim-line { opacity: 1; }
 </style>
 <rect width="486" height="486" x="2" y="2" class="card-bg" />
 <path d="M 2 10 A 8 8 0 0 1 10 2 L 480 2 A 8 8 0 0 1 488 10 L 488 30 L 2 30 Z" class="header-bg" stroke="#30363d" stroke-width="1" />
@@ -28,56 +21,65 @@
 <circle cx="28" cy="16" r="4.5" fill="#ffbd2e" />
 <circle cx="40" cy="16" r="4.5" fill="#27c93f" />
 <text x="245.0" y="20" text-anchor="middle" class="title">neofetch --user sruj08</text>
-<g class="anim-line" style="animation-delay: 0.10s;">
+<g class="anim-line">
   <text x="20" y="54" class="prompt-line">sruj08@pict-pune:~$ <tspan fill="#e6edf3">neofetch</tspan></text>
   <line x1="20" y1="64" x2="470" y2="64" stroke="#30363d" stroke-width="1" />
 </g>
-<g class="anim-line" style="animation-delay: 0.22s;">
+<g class="anim-line">
   <text x="22" y="90" class="key">user</text>
   <text x="110" y="90" class="key" fill="#8b949e">-&gt;</text>
   <text x="132" y="90" class="val" fill="#58a6ff">Srujan Satav (sruj08)</text>
+  <animate attributeName="opacity" from="0" to="1" begin="0.15s" dur="0.3s" fill="freeze" />
 </g>
-<g class="anim-line" style="animation-delay: 0.34s;">
+<g class="anim-line">
   <text x="22" y="122" class="key">roles</text>
   <text x="110" y="122" class="key" fill="#8b949e">-&gt;</text>
   <text x="132" y="122" class="val" fill="#79c0ff">Co-Founder @ Novaryn | Partner @ MindstriX</text>
+  <animate attributeName="opacity" from="0" to="1" begin="0.25s" dur="0.3s" fill="freeze" />
 </g>
-<g class="anim-line" style="animation-delay: 0.46s;">
+<g class="anim-line">
   <text x="22" y="154" class="key">edu</text>
   <text x="110" y="154" class="key" fill="#8b949e">-&gt;</text>
   <text x="132" y="154" class="val" fill="#d2a8ff">B.Tech ENTC @ PICT Pune (CGPA: 8.38)</text>
+  <animate attributeName="opacity" from="0" to="1" begin="0.35s" dur="0.3s" fill="freeze" />
 </g>
-<g class="anim-line" style="animation-delay: 0.58s;">
+<g class="anim-line">
   <text x="22" y="186" class="key">wins</text>
   <text x="110" y="186" class="key" fill="#8b949e">-&gt;</text>
   <text x="132" y="186" class="val" fill="#ffbd2e">🏆 4x Hackathon Winner (Pune Agri 15L, TechFiesta #1)</text>
+  <animate attributeName="opacity" from="0" to="1" begin="0.45s" dur="0.3s" fill="freeze" />
 </g>
-<g class="anim-line" style="animation-delay: 0.70s;">
+<g class="anim-line">
   <text x="22" y="218" class="key">langs</text>
   <text x="110" y="218" class="key" fill="#8b949e">-&gt;</text>
   <text x="132" y="218" class="val" fill="#7ee787">Golang, C++, C, Java, Python, Solidity, JS/TS</text>
+  <animate attributeName="opacity" from="0" to="1" begin="0.55s" dur="0.3s" fill="freeze" />
 </g>
-<g class="anim-line" style="animation-delay: 0.82s;">
+<g class="anim-line">
   <text x="22" y="250" class="key">backend</text>
   <text x="110" y="250" class="key" fill="#8b949e">-&gt;</text>
   <text x="132" y="250" class="val" fill="#38d430">Go Microservices, REST APIs, Docker, GCP, Firebase</text>
+  <animate attributeName="opacity" from="0" to="1" begin="0.65s" dur="0.3s" fill="freeze" />
 </g>
-<g class="anim-line" style="animation-delay: 0.94s;">
+<g class="anim-line">
   <text x="22" y="282" class="key">ai / ml</text>
   <text x="110" y="282" class="key" fill="#8b949e">-&gt;</text>
   <text x="132" y="282" class="val" fill="#e3b341">LLMs, RAG, LangChain, YOLOv8, OpenCV, CNN</text>
+  <animate attributeName="opacity" from="0" to="1" begin="0.75s" dur="0.3s" fill="freeze" />
 </g>
-<g class="anim-line" style="animation-delay: 1.06s;">
+<g class="anim-line">
   <text x="22" y="314" class="key">web3</text>
   <text x="110" y="314" class="key" fill="#8b949e">-&gt;</text>
   <text x="132" y="314" class="val" fill="#f78166">Solidity, Smart Contracts, OpenZeppelin, Sepolia</text>
+  <animate attributeName="opacity" from="0" to="1" begin="0.85s" dur="0.3s" fill="freeze" />
 </g>
-<g class="anim-line" style="animation-delay: 1.18s;">
+<g class="anim-line">
   <text x="22" y="346" class="key">status</text>
   <text x="110" y="346" class="key" fill="#8b949e">-&gt;</text>
   <text x="132" y="346" class="val" fill="#56d364">🟢 Building Production AI & Blockchain Systems</text>
+  <animate attributeName="opacity" from="0" to="1" begin="0.95s" dur="0.3s" fill="freeze" />
 </g>
-<g class="anim-line" style="animation-delay: 1.33s;">
+<g class="anim-line">
   <line x1="20" y1="376" x2="470" y2="376" stroke="#30363d" stroke-width="1" />
   <rect x="22" y="388" width="20" height="14" rx="3" fill="#161b22" />
   <rect x="48" y="388" width="20" height="14" rx="3" fill="#ff5f56" />
