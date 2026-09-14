@@ -24,17 +24,11 @@ jobs:
 
       - run: python scripts/fetch_contributions.py
 
-      - run: python scripts/generate_all_apple_assets.py
+      - run: python scripts/make_all_ascii_svgs.py
 
-      - run: python scripts/make_apple_header_svg.py
-
-      - run: python scripts/make_apple_achievements_svg.py
-
-      - run: python scripts/make_apple_tech_stack_svg.py
-
-      - run: python scripts/make_apple_heatmap_svg.py
+      - run: python scripts/render_heatmap_svg.py
 
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: refresh contribution graph and profile art [skip ci]"
-          file_pattern: "data/contributions.json apple-*.svg"
+          file_pattern: "data/contributions.json ascii-*.svg contrib-heatmap.svg"
