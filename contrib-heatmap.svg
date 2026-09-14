@@ -730,8 +730,8 @@
 <rect x="614" y="99" width="13" height="13" fill="#0e4429" class="day-rect">
   <title>2 contributions on 2026-05-12</title>
 </rect>
-<rect x="614" y="116" width="13" height="13" fill="#26a641" class="day-rect">
-  <title>6 contributions on 2026-05-13</title>
+<rect x="614" y="116" width="13" height="13" fill="#006d32" class="day-rect">
+  <title>4 contributions on 2026-05-13</title>
 </rect>
 <rect x="614" y="133" width="13" height="13" fill="#006d32" class="day-rect">
   <title>4 contributions on 2026-05-14</title>
@@ -1105,7 +1105,7 @@
 <rect x="920" y="82" width="13" height="13" fill="#3fb950" class="day-rect">
   <title>8 contributions on 2026-09-14</title>
 </rect>
-<text x="36" y="212" class="stats-text">Total: 170 commits  |  Current Streak: 1 days  |  Longest Streak: 6 days</text>
+<text x="36" y="212" class="stats-text">Total: 168 commits  |  Current Streak: 1 days  |  Longest Streak: 6 days</text>
 <text x="849" y="212" class="legend-text">Less</text>
 <rect x="885" y="202" width="13" height="13" rx="2" fill="#161b22" />
 <rect x="902" y="202" width="13" height="13" rx="2" fill="#0e4429" />
