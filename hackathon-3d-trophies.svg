@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 270" width="860" height="270">
+<defs>
+  <filter id="glow3d" x="-20%" y="-20%" width="140%" height="140%">
+    <feGaussianBlur stdDeviation="4" result="blur" />
+    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+  </filter>
+  <filter id="shadow3d" x="-10%" y="-10%" width="120%" height="120%">
+    <feDropShadow dx="0" dy="10" stdDeviation="6" flood-color="#000000" flood-opacity="0.7" />
+  </filter>
+  <linearGradient id="panelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#161b22" />
+    <stop offset="100%" stop-color="#0d1117" />
+  </linearGradient>
+  <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#30363d" />
+    <stop offset="50%" stop-color="#58a6ff" stop-opacity="0.6" />
+    <stop offset="100%" stop-color="#30363d" />
+  </linearGradient>
+</defs>
+<style>
+  @keyframes floatUp {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-4px); }
+    100% { transform: translateY(0px); }
+  }
+  .bg { fill: #0d1117; rx: 10px; ry: 10px; stroke: #30363d; stroke-width: 1px; }
+  .card-3d { fill: url(#panelGrad); rx: 8px; ry: 8px; stroke: #30363d; stroke-width: 1.5px; filter: url(#shadow3d); transition: all 0.3s; }
+  .card-3d:hover { stroke: #58a6ff; }
+  .title-bar { fill: #161b22; rx: 10px; ry: 10px; }
+  .header-title { font-family: monospace; font-size: 11px; font-weight: bold; fill: #8b949e; }
+  .trophy-title { font-family: "Fira Code", monospace; font-size: 13px; font-weight: bold; fill: #e6edf3; }
+  .trophy-sub { font-family: monospace; font-size: 10px; fill: #8b949e; }
+  .trophy-rank { font-family: "Fira Code", monospace; font-size: 12px; font-weight: bold; }
+  .trophy-prize { font-family: "Fira Code", monospace; font-size: 11px; font-weight: bold; fill: #39d353; }
+  .trophy-detail { font-family: system-ui, sans-serif; font-size: 10px; fill: #8b949e; }
+</style>
+<rect width="860" height="270" class="bg" />
+<path d="M 0 8 A 8 8 0 0 1 8 0 L 852 0 A 8 8 0 0 1 860 8 L 860 28 L 0 28 Z" class="title-bar" stroke="#30363d" stroke-width="1" />
+<circle cx="15" cy="14" r="4" fill="#ff5f56" />
+<circle cx="27" cy="14" r="4" fill="#ffbd2e" />
+<circle cx="39" cy="14" r="4" fill="#27c93f" />
+<text x="430.0" y="18" text-anchor="middle" class="header-title">sruj08@github ~ $ ./showcase_hackathons.sh --major-wins</text>
+<g class="card-group">
+  <rect x="22" y="42" width="398" height="100" class="card-3d" />
+  <path d="M 23 50 A 8 8 0 0 1 31 43 L 411 43 A 8 8 0 0 1 419 50 L 419 47 L 23 47 Z" fill="#f1e05a" opacity="0.9" />
+  <text x="38" y="66" class="trophy-rank" fill="#f1e05a">🏆 Runner-Up</text>
+  <text x="404" y="66" text-anchor="end" class="trophy-prize">INR 15 Lakhs</text>
+  <text x="38" y="86" class="trophy-title">Pune Agri Hackathon '26</text>
+  <text x="38" y="102" class="trophy-sub">Govt. of Maharashtra • <tspan fill="#e6edf3">Out of 2,000+ Teams Worldwide</tspan></text>
+  <line x1="38" y1="112" x2="404" y2="112" stroke="#30363d" stroke-width="1" />
+  <text x="38" y="128" class="trophy-detail">✨ Felicitated by Hon. Chief Minister of Maharashtra</text>
+</g>
+<g class="card-group">
+  <rect x="440" y="42" width="398" height="100" class="card-3d" />
+  <path d="M 441 50 A 8 8 0 0 1 449 43 L 829 43 A 8 8 0 0 1 837 50 L 837 47 L 441 47 Z" fill="#38d430" opacity="0.9" />
+  <text x="456" y="66" class="trophy-rank" fill="#38d430">🥇 1st Rank (Winner)</text>
+  <text x="822" y="66" text-anchor="end" class="trophy-prize">INR 3.5L+ Pool</text>
+  <text x="456" y="86" class="trophy-title">TechFiesta '26 Global</text>
+  <text x="456" y="102" class="trophy-sub">International Hackathon • <tspan fill="#e6edf3">Out of 700+ Teams Worldwide</tspan></text>
+  <line x1="456" y1="112" x2="822" y2="112" stroke="#30363d" stroke-width="1" />
+  <text x="456" y="128" class="trophy-detail">✨ Executed full architectural pivot in 24 hours</text>
+</g>
+<g class="card-group">
+  <rect x="22" y="154" width="398" height="100" class="card-3d" />
+  <path d="M 23 162 A 8 8 0 0 1 31 155 L 411 155 A 8 8 0 0 1 419 162 L 419 159 L 23 159 Z" fill="#58a6ff" opacity="0.9" />
+  <text x="38" y="178" class="trophy-rank" fill="#58a6ff">🥇 National Winner</text>
+  <text x="404" y="178" text-anchor="end" class="trophy-prize">INR 2 Lakhs</text>
+  <text x="38" y="198" class="trophy-title">VOIS Innovation Marathon 2.0</text>
+  <text x="38" y="214" class="trophy-sub">Vodafone Intelligent Solutions • <tspan fill="#e6edf3">Out of 630+ Teams Nationwide</tspan></text>
+  <line x1="38" y1="224" x2="404" y2="224" stroke="#30363d" stroke-width="1" />
+  <text x="38" y="240" class="trophy-detail">✨ Owned architecture and production deployment</text>
+</g>
+<g class="card-group">
+  <rect x="440" y="154" width="398" height="100" class="card-3d" />
+  <path d="M 441 162 A 8 8 0 0 1 449 155 L 829 155 A 8 8 0 0 1 837 162 L 837 159 L 441 159 Z" fill="#d2a8ff" opacity="0.9" />
+  <text x="456" y="178" class="trophy-rank" fill="#d2a8ff">🥉 2nd Runner-Up</text>
+  <text x="822" y="178" text-anchor="end" class="trophy-prize">INR 50,000</text>
+  <text x="456" y="198" class="trophy-title">iQOO Hackathon '26</text>
+  <text x="456" y="214" class="trophy-sub">Phone-First Computing • <tspan fill="#e6edf3">6,500+ Registrations</tspan></text>
+  <line x1="456" y1="224" x2="822" y2="224" stroke="#30363d" stroke-width="1" />
+  <text x="456" y="240" class="trophy-detail">✨ On-device offline spatial memory & path tracker</text>
+</g>
+</svg>

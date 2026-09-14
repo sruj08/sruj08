@@ -1,14 +1,6 @@
 <div align="center">
 
-### <code>sruj08@github ~ $ ./contributions.sh</code>
-
-<a href="https://github.com/sruj08">
-  <img src="./contrib-heatmap.svg" width="860" alt="Srujan Satav's Contribution Heatmap" />
-</a>
-
-<br><br>
-
-### <code>sruj08@github ~ $ whoami</code>
+### <code>sruj08@github ~ $ neofetch</code>
 
 <table border="0" cellpadding="0" cellspacing="0">
   <tr>
@@ -21,17 +13,43 @@
   </tr>
 </table>
 
-<br>
+<br><br>
+
+### <code>sruj08@github ~ $ ./showcase_hackathons.sh</code>
+
+<a href="https://github.com/sruj08">
+  <img src="./hackathon-3d-trophies.svg" width="860" alt="Srujan Satav 3D Hackathon Trophies" />
+</a>
+
+<br><br>
+
+### <code>sruj08@github ~ $ ./tech_stack.sh</code>
+
+<a href="https://github.com/sruj08">
+  <img src="./tech-stack-3d.svg" width="860" alt="Srujan Satav 3D Tech Stack Grid" />
+</a>
+
+<br><br>
+
+### <code>sruj08@github ~ $ ./contributions.sh</code>
+
+<a href="https://github.com/sruj08">
+  <img src="./contrib-heatmap.svg" width="860" alt="Srujan Satav Contribution Heatmap" />
+</a>
+
+<br><br>
 
 ```sys
-System Status: 🟢 All services operational | Location: Pune, India | Stack: Python / C++ / ENTC
+System Status: 🟢 All services operational | Novaryn Tech & MindstriX | PICT Pune ENTC
 ```
 
 ---
 
 <p align="center">
   <a href="https://github.com/sruj08">GitHub</a> •
-  <a href="https://x.com/SatavSruja549">X (Twitter)</a>
+  <a href="https://www.linkedin.com/in/satavsrujan/">LinkedIn</a> •
+  <a href="https://x.com/SatavSruja549">X (Twitter)</a> •
+  <a href="mailto:satavsrujan@gmail.com">Email</a>
 </p>
 
 </div>

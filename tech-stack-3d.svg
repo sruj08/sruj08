@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 250" width="860" height="250">
+<defs>
+  <filter id="pillShadow" x="-10%" y="-10%" width="120%" height="120%">
+    <feDropShadow dx="0" dy="3" stdDeviation="2" flood-color="#000000" flood-opacity="0.5" />
+  </filter>
+</defs>
+<style>
+  .bg { fill: #0d1117; rx: 10px; ry: 10px; stroke: #30363d; stroke-width: 1px; }
+  .title-bar { fill: #161b22; rx: 10px; ry: 10px; }
+  .header-title { font-family: monospace; font-size: 11px; font-weight: bold; fill: #8b949e; }
+  .cat-title { font-family: "Fira Code", monospace; font-size: 12px; font-weight: bold; }
+  .pill-bg { rx: 12px; ry: 12px; fill: #161b22; stroke: #30363d; stroke-width: 1px; filter: url(#pillShadow); transition: all 0.2s; }
+  .pill-text { font-family: "Fira Code", monospace; font-size: 11px; fill: #c9d1d9; }
+</style>
+<rect width="860" height="250" class="bg" />
+<path d="M 0 8 A 8 8 0 0 1 8 0 L 852 0 A 8 8 0 0 1 860 8 L 860 28 L 0 28 Z" class="title-bar" stroke="#30363d" stroke-width="1" />
+<circle cx="15" cy="14" r="4" fill="#ff5f56" />
+<circle cx="27" cy="14" r="4" fill="#ffbd2e" />
+<circle cx="39" cy="14" r="4" fill="#27c93f" />
+<text x="430.0" y="18" text-anchor="middle" class="header-title">sruj08@github ~ $ ./tech_stack.sh --3d-grid</text>
+<text x="20" y="60" class="cat-title" fill="#58a6ff">⚡ Languages & Core</text>
+<g class="pill-group">
+  <rect x="220" y="46" width="65.0" height="22" class="pill-bg" />
+  <text x="252.5" y="60" text-anchor="middle" class="pill-text">Golang</text>
+</g>
+<g class="pill-group">
+  <rect x="295.0" y="46" width="42.5" height="22" class="pill-bg" />
+  <text x="316.25" y="60" text-anchor="middle" class="pill-text">C++</text>
+</g>
+<g class="pill-group">
+  <rect x="347.5" y="46" width="27.5" height="22" class="pill-bg" />
+  <text x="361.25" y="60" text-anchor="middle" class="pill-text">C</text>
+</g>
+<g class="pill-group">
+  <rect x="385.0" y="46" width="50.0" height="22" class="pill-bg" />
+  <text x="410.0" y="60" text-anchor="middle" class="pill-text">Java</text>
+</g>
+<g class="pill-group">
+  <rect x="445.0" y="46" width="65.0" height="22" class="pill-bg" />
+  <text x="477.5" y="60" text-anchor="middle" class="pill-text">Python</text>
+</g>
+<g class="pill-group">
+  <rect x="520.0" y="46" width="80.0" height="22" class="pill-bg" />
+  <text x="560.0" y="60" text-anchor="middle" class="pill-text">Solidity</text>
+</g>
+<g class="pill-group">
+  <rect x="610.0" y="46" width="95.0" height="22" class="pill-bg" />
+  <text x="657.5" y="60" text-anchor="middle" class="pill-text">JavaScript</text>
+</g>
+<g class="pill-group">
+  <rect x="715.0" y="46" width="95.0" height="22" class="pill-bg" />
+  <text x="762.5" y="60" text-anchor="middle" class="pill-text">TypeScript</text>
+</g>
+<text x="20" y="108" class="cat-title" fill="#38d430">🚀 Backend, Cloud & Architecture</text>
+<g class="pill-group">
+  <rect x="220" y="94" width="140.0" height="22" class="pill-bg" />
+  <text x="290.0" y="108" text-anchor="middle" class="pill-text">Go Microservices</text>
+</g>
+<g class="pill-group">
+  <rect x="370.0" y="94" width="87.5" height="22" class="pill-bg" />
+  <text x="413.75" y="108" text-anchor="middle" class="pill-text">REST APIs</text>
+</g>
+<g class="pill-group">
+  <rect x="467.5" y="94" width="87.5" height="22" class="pill-bg" />
+  <text x="511.25" y="108" text-anchor="middle" class="pill-text">ExpressJS</text>
+</g>
+<g class="pill-group">
+  <rect x="565.0" y="94" width="80.0" height="22" class="pill-bg" />
+  <text x="605.0" y="108" text-anchor="middle" class="pill-text">Firebase</text>
+</g>
+<g class="pill-group">
+  <rect x="655.0" y="94" width="65.0" height="22" class="pill-bg" />
+  <text x="687.5" y="108" text-anchor="middle" class="pill-text">Docker</text>
+</g>
+<g class="pill-group">
+  <rect x="730.0" y="94" width="42.5" height="22" class="pill-bg" />
+  <text x="751.25" y="108" text-anchor="middle" class="pill-text">GCP</text>
+</g>
+<text x="20" y="156" class="cat-title" fill="#e3b341">🧠 AI / ML, Computer Vision & RAG</text>
+<g class="pill-group">
+  <rect x="220" y="142" width="50.0" height="22" class="pill-bg" />
+  <text x="245.0" y="156" text-anchor="middle" class="pill-text">LLMs</text>
+</g>
+<g class="pill-group">
+  <rect x="280.0" y="142" width="110.0" height="22" class="pill-bg" />
+  <text x="335.0" y="156" text-anchor="middle" class="pill-text">RAG Pipeline</text>
+</g>
+<g class="pill-group">
+  <rect x="400.0" y="142" width="87.5" height="22" class="pill-bg" />
+  <text x="443.75" y="156" text-anchor="middle" class="pill-text">LangChain</text>
+</g>
+<g class="pill-group">
+  <rect x="497.5" y="142" width="65.0" height="22" class="pill-bg" />
+  <text x="530.0" y="156" text-anchor="middle" class="pill-text">YOLOv8</text>
+</g>
+<g class="pill-group">
+  <rect x="572.5" y="142" width="65.0" height="22" class="pill-bg" />
+  <text x="605.0" y="156" text-anchor="middle" class="pill-text">OpenCV</text>
+</g>
+<g class="pill-group">
+  <rect x="647.5" y="142" width="42.5" height="22" class="pill-bg" />
+  <text x="668.75" y="156" text-anchor="middle" class="pill-text">CNN</text>
+</g>
+<text x="20" y="204" class="cat-title" fill="#d2a8ff">🔗 Web3 & Blockchain Development</text>
+<g class="pill-group">
+  <rect x="220" y="190" width="80.0" height="22" class="pill-bg" />
+  <text x="260.0" y="204" text-anchor="middle" class="pill-text">Solidity</text>
+</g>
+<g class="pill-group">
+  <rect x="310.0" y="190" width="132.5" height="22" class="pill-bg" />
+  <text x="376.25" y="204" text-anchor="middle" class="pill-text">Smart Contracts</text>
+</g>
+<g class="pill-group">
+  <rect x="452.5" y="190" width="65.0" height="22" class="pill-bg" />
+  <text x="485.0" y="204" text-anchor="middle" class="pill-text">ERC-20</text>
+</g>
+<g class="pill-group">
+  <rect x="527.5" y="190" width="110.0" height="22" class="pill-bg" />
+  <text x="582.5" y="204" text-anchor="middle" class="pill-text">OpenZeppelin</text>
+</g>
+<g class="pill-group">
+  <rect x="647.5" y="190" width="80.0" height="22" class="pill-bg" />
+  <text x="687.5" y="204" text-anchor="middle" class="pill-text">MetaMask</text>
+</g>
+<g class="pill-group">
+  <rect x="737.5" y="190" width="72.5" height="22" class="pill-bg" />
+  <text x="773.75" y="204" text-anchor="middle" class="pill-text">Sepolia</text>
+</g>
+</svg>
