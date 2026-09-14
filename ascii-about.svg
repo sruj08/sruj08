@@ -1,18 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1125" height="290" viewBox="0 0 1125 290" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" width="1125" height="290" viewBox="0 0 1125 290" role="img" aria-label="Terminal Card">
   <rect x="0.5" y="0.5" width="1124" height="289" rx="8" fill="#0d1117" stroke="#30363d"/>
-  <style>
-    .txt { font-family: 'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace; font-size: 13px; xml-space: preserve; }
-  </style>
-  <text x="24" y="32" fill="#58a6ff" class="txt" font-weight="bold">─ sruj08@about ───────────────────────────────────────────────────────────────────────────────────</text>
-  <text x="24" y="52" fill="#c9d1d9" class="txt" font-weight="normal">. Name: ......... Srujan Satav</text>
-  <text x="24" y="72" fill="#c9d1d9" class="txt" font-weight="normal">. Education: .... B.Tech Electronics & Telecommunication Engineering @ PICT Pune '26 (CGPA 8.38)</text>
-  <text x="24" y="92" fill="#c9d1d9" class="txt" font-weight="normal">. Roles: ........ Co-Founder @ Novaryn Technologies LLP  |  Partner @ MindstriX</text>
-  <text x="24" y="112" fill="#c9d1d9" class="txt" font-weight="normal">. Location: ..... Pune, Maharashtra, India</text>
-  <text x="24" y="132" fill="#c9d1d9" class="txt" font-weight="normal">. Core Focus: ... Go Microservices, Distributed Systems, AI/ML Pipelines, Web3 Architecture</text>
-  <text x="24" y="152" fill="#30363d" class="txt" font-weight="normal">─────────────────────────────────────────────────────────────────────────────────────────────────</text>
-  <text x="24" y="172" fill="#8b949e" class="txt" font-weight="normal">. Philosophy: .. Engineering production systems grounded in resilience, clean code, and zero fluff.</text>
-  <text x="24" y="192" fill="#f0f6fc" class="txt" font-weight="normal">. Competitions: . Felicitated by Chief Minister of Maharashtra for Agri AI Platform (15L Prize)</text>
-  <text x="24" y="212" fill="#f0f6fc" class="txt" font-weight="normal">                 Global Winner @ TechFiesta '26 International (INR 3.5L+ Pool)</text>
-  <text x="24" y="232" fill="#f0f6fc" class="txt" font-weight="normal">                 National Winner @ VOIS Innovation Marathon 2.0 (INR 2L Pool)</text>
-  <text x="24" y="252" fill="#f0f6fc" class="txt" font-weight="normal">                 2nd Runner-Up @ iQOO Hackathon 2026 (INR 50K Prize)</text>
+  <text x="24" y="34" fill="#58a6ff" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" font-size="13" xml:space="preserve" font-weight="bold">─ sruj08@about ───────────────────────────────────────────────────────────────────────────────────</text>
+  <text x="24" y="55" fill="#c9d1d9" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" font-size="13" xml:space="preserve">. Name: ......... Srujan Satav</text>
+  <text x="24" y="76" fill="#c9d1d9" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" font-size="13" xml:space="preserve">. Education: .... B.Tech Electronics &amp; Telecommunication Engineering @ PICT Pune '26 (CGPA 8.38)</text>
+  <text x="24" y="97" fill="#c9d1d9" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" font-size="13" xml:space="preserve">. Roles: ........ Co-Founder @ Novaryn Technologies LLP  |  Partner @ MindstriX</text>
+  <text x="24" y="118" fill="#c9d1d9" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" font-size="13" xml:space="preserve">. Location: ..... Pune, Maharashtra, India</text>
+  <text x="24" y="139" fill="#c9d1d9" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" font-size="13" xml:space="preserve">. Core Focus: ... Go Microservices, Distributed Systems, AI/ML Pipelines, Web3 Architecture</text>
+  <text x="24" y="160" fill="#30363d" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" font-size="13" xml:space="preserve">─────────────────────────────────────────────────────────────────────────────────────────────────</text>
+  <text x="24" y="181" fill="#8b949e" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" font-size="13" xml:space="preserve">. Philosophy: .. Engineering production systems grounded in resilience, clean code, and zero fluff.</text>
+  <text x="24" y="202" fill="#f0f6fc" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" font-size="13" xml:space="preserve">. Competitions: . Felicitated by Chief Minister of Maharashtra for Agri AI Platform (15L Prize)</text>
+  <text x="24" y="223" fill="#f0f6fc" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" font-size="13" xml:space="preserve">                 Global Winner @ TechFiesta '26 International (INR 3.5L+ Pool)</text>
+  <text x="24" y="244" fill="#f0f6fc" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" font-size="13" xml:space="preserve">                 National Winner @ VOIS Innovation Marathon 2.0 (INR 2L Pool)</text>
+  <text x="24" y="265" fill="#f0f6fc" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" font-size="13" xml:space="preserve">                 2nd Runner-Up @ iQOO Hackathon 2026 (INR 50K Prize)</text>
 </svg>

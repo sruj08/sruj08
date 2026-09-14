@@ -8,27 +8,27 @@
 
 <br><br>
 
-<img src="https://raw.githubusercontent.com/sruj08/sruj08/main/ascii-about.svg" width="100%" alt="sruj08 About" />
+<img src="ascii-about.svg" width="100%" alt="sruj08 About" />
 
 <br><br>
 
-<img src="https://raw.githubusercontent.com/sruj08/sruj08/main/ascii-achievements.svg" width="100%" alt="sruj08 Major Victories" />
+<img src="ascii-achievements.svg" width="100%" alt="sruj08 Major Victories" />
 
 <br><br>
 
-<img src="https://raw.githubusercontent.com/sruj08/sruj08/main/ascii-techstack.svg" width="100%" alt="sruj08 Technical Stack" />
+<img src="ascii-techstack.svg" width="100%" alt="sruj08 Technical Stack" />
 
 <br><br>
 
-<img src="https://raw.githubusercontent.com/sruj08/sruj08/main/ascii-projects.svg" width="100%" alt="sruj08 Featured Codebases" />
+<img src="ascii-projects.svg" width="100%" alt="sruj08 Featured Codebases" />
 
 <br><br>
 
-<img src="https://raw.githubusercontent.com/sruj08/sruj08/main/ascii-experience.svg" width="100%" alt="sruj08 Experience" />
+<img src="ascii-experience.svg" width="100%" alt="sruj08 Experience" />
 
 <br><br>
 
-<img src="https://raw.githubusercontent.com/sruj08/sruj08/main/contrib-heatmap.svg" width="100%" alt="sruj08 Contribution Heatmap" />
+<img src="contrib-heatmap.svg" width="100%" alt="sruj08 Contribution Heatmap" />
 
 <br><br>
 

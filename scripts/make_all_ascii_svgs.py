@@ -1,34 +1,32 @@
 import os
-import json
 
-# Exact colors from gh-ascii card
+# Exact colors and fonts from gh-ascii card
 BG_COLOR = "#0d1117"
 BORDER_COLOR = "#30363d"
 HEADER_COLOR = "#58a6ff"
 TEXT_COLOR = "#c9d1d9"
 MUTED_TEXT = "#8b949e"
 WHITE_TEXT = "#f0f6fc"
-GREEN_COLOR = "#3fb950"
 
-FONT_FAMILY = "'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace"
+FONT_ATTRS = 'font-family="\'Consolas\', \'Menlo\', \'DejaVu Sans Mono\', monospace" font-size="13" xml:space="preserve"'
 
 def create_terminal_card(width, height, content_lines, output_path):
     svg = []
-    svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img">')
+    svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-label="Terminal Card">')
     # Card background & border
     svg.append(f'  <rect x="0.5" y="0.5" width="{width - 1}" height="{height - 1}" rx="8" fill="{BG_COLOR}" stroke="{BORDER_COLOR}"/>')
     
-    svg.append('  <style>')
-    svg.append(f'    .txt {{ font-family: {FONT_FAMILY}; font-size: 13px; xml-space: preserve; }}')
-    svg.append('  </style>')
-    
-    start_y = 32
-    line_height = 20
+    start_y = 34
+    line_height = 21
     
     for idx, (text, color, font_weight) in enumerate(content_lines):
         y = start_y + idx * line_height
-        weight_attr = f' font-weight="{font_weight}"' if font_weight else ''
-        svg.append(f'  <text x="24" y="{y}" fill="{color}" class="txt"{weight_attr}>{text}</text>')
+        weight_attr = ' font-weight="bold"' if font_weight == "bold" else ''
+        
+        # Escape any special XML characters
+        escaped_text = text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+        
+        svg.append(f'  <text x="24" y="{y}" fill="{color}" {FONT_ATTRS}{weight_attr}>{escaped_text}</text>')
         
     svg.append('</svg>')
     

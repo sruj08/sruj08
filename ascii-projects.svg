@@ -1,18 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1125" height="290" viewBox="0 0 1125 290" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" width="1125" height="290" viewBox="0 0 1125 290" role="img" aria-label="Terminal Card">
   <rect x="0.5" y="0.5" width="1124" height="289" rx="8" fill="#0d1117" stroke="#30363d"/>
-  <style>
-    .txt { font-family: 'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace; font-size: 13px; xml-space: preserve; }
-  </style>
-  <text x="24" y="32" fill="#58a6ff" class="txt" font-weight="bold">─ sruj08@codebases ───────────────────────────────────────────────────────────────────────────────</text>
-  <text x="24" y="52" fill="#f0f6fc" class="txt" font-weight="bold">[01] CHANAKYA        AI-Powered Regulatory Intelligence Platform for SEBI Hackathon</text>
-  <text x="24" y="72" fill="#8b949e" class="txt" font-weight="normal">     Stack:          Go Microservices · LLMs · RAG · Docker</text>
-  <text x="24" y="92" fill="#30363d" class="txt" font-weight="normal">─────────────────────────────────────────────────────────────────────────────────────────────────</text>
-  <text x="24" y="112" fill="#f0f6fc" class="txt" font-weight="bold">[02] Krishi SahAI    Crop Disease & Pest Advisory Platform with Real-Time Vision</text>
-  <text x="24" y="132" fill="#8b949e" class="txt" font-weight="normal">     Stack:          Flask · LangChain · YOLOv8 · React</text>
-  <text x="24" y="152" fill="#30363d" class="txt" font-weight="normal">─────────────────────────────────────────────────────────────────────────────────────────────────</text>
-  <text x="24" y="172" fill="#f0f6fc" class="txt" font-weight="bold">[03] eSurvey         AI-Assisted Digital Agricultural Survey & GIS Land Mapping</text>
-  <text x="24" y="192" fill="#8b949e" class="txt" font-weight="normal">     Stack:          REST APIs · Firebase · GIS Mapping</text>
-  <text x="24" y="212" fill="#30363d" class="txt" font-weight="normal">─────────────────────────────────────────────────────────────────────────────────────────────────</text>
-  <text x="24" y="232" fill="#f0f6fc" class="txt" font-weight="bold">[04] KrishiPrabandh  Enterprise Agricultural Governance & Insurance Claim Intelligence</text>
-  <text x="24" y="252" fill="#8b949e" class="txt" font-weight="normal">     Stack:          Solidity · Go · GCP · Enterprise AI</text>
+  <text x="24" y="34" fill="#58a6ff" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" font-size="13" xml:space="preserve" font-weight="bold">─ sruj08@codebases ───────────────────────────────────────────────────────────────────────────────</text>
+  <text x="24" y="55" fill="#f0f6fc" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" font-size="13" xml:space="preserve" font-weight="bold">[01] CHANAKYA        AI-Powered Regulatory Intelligence Platform for SEBI Hackathon</text>
+  <text x="24" y="76" fill="#8b949e" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" font-size="13" xml:space="preserve">     Stack:          Go Microservices · LLMs · RAG · Docker</text>
+  <text x="24" y="97" fill="#30363d" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" font-size="13" xml:space="preserve">─────────────────────────────────────────────────────────────────────────────────────────────────</text>
+  <text x="24" y="118" fill="#f0f6fc" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" font-size="13" xml:space="preserve" font-weight="bold">[02] Krishi SahAI    Crop Disease &amp; Pest Advisory Platform with Real-Time Vision</text>
+  <text x="24" y="139" fill="#8b949e" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" font-size="13" xml:space="preserve">     Stack:          Flask · LangChain · YOLOv8 · React</text>
+  <text x="24" y="160" fill="#30363d" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" font-size="13" xml:space="preserve">─────────────────────────────────────────────────────────────────────────────────────────────────</text>
+  <text x="24" y="181" fill="#f0f6fc" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" font-size="13" xml:space="preserve" font-weight="bold">[03] eSurvey         AI-Assisted Digital Agricultural Survey &amp; GIS Land Mapping</text>
+  <text x="24" y="202" fill="#8b949e" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" font-size="13" xml:space="preserve">     Stack:          REST APIs · Firebase · GIS Mapping</text>
+  <text x="24" y="223" fill="#30363d" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" font-size="13" xml:space="preserve">─────────────────────────────────────────────────────────────────────────────────────────────────</text>
+  <text x="24" y="244" fill="#f0f6fc" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" font-size="13" xml:space="preserve" font-weight="bold">[04] KrishiPrabandh  Enterprise Agricultural Governance &amp; Insurance Claim Intelligence</text>
+  <text x="24" y="265" fill="#8b949e" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" font-size="13" xml:space="preserve">     Stack:          Solidity · Go · GCP · Enterprise AI</text>
 </svg>
